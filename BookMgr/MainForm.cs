@@ -314,6 +314,13 @@ namespace BookMgr
             Book.Visible = false;
         }
 
+        private void UserRank_Load(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            db.connect();
+            DataTable dt = db.showDBTable("select * from user");
+            dataGridView3.DataSource = dt;
+        }
     }
 
 }

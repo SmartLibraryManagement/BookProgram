@@ -54,5 +54,22 @@ namespace BookMgr
             adapter.Fill(dt);
             return dt;
         }
+
+        public void userCheck(String ID, String PW)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select PW from user where id = '" + ID + "'", con);
+            try
+            {
+                com.Fill(ds, "user");
+
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
     }
 }
