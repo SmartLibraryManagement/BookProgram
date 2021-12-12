@@ -996,6 +996,7 @@ namespace BookMgr
             this.OrderList.Size = new System.Drawing.Size(1418, 584);
             this.OrderList.TabIndex = 0;
             this.OrderList.Text = "도서신청관리";
+            this.OrderList.Enter += new System.EventHandler(this.OrderList_Enter);
             // 
             // BookPutbtn
             // 
@@ -1206,6 +1207,7 @@ namespace BookMgr
             this.Findbookpage.Size = new System.Drawing.Size(1432, 630);
             this.Findbookpage.TabIndex = 0;
             this.Findbookpage.Text = "도서검색";
+            this.Findbookpage.Enter += new System.EventHandler(this.Findbookpage_Enter);
             // 
             // SrchBookbtn
             // 
@@ -1346,6 +1348,7 @@ namespace BookMgr
             this.Returnbookpage.Size = new System.Drawing.Size(1432, 630);
             this.Returnbookpage.TabIndex = 1;
             this.Returnbookpage.Text = "도서반납";
+            this.Returnbookpage.Enter += new System.EventHandler(this.Returnbookpage_Enter);
             // 
             // Longbtn
             // 
@@ -1484,6 +1487,7 @@ namespace BookMgr
             this.Mgrbookpage.Size = new System.Drawing.Size(1432, 630);
             this.Mgrbookpage.TabIndex = 2;
             this.Mgrbookpage.Text = "도서관리";
+            this.Mgrbookpage.Enter += new System.EventHandler(this.Mgrbookpage_Enter);
             // 
             // ListBookbtn
             // 

@@ -321,6 +321,38 @@ namespace BookMgr
             DataTable dt = db.showDBTable("select * from user");
             dataGridView3.DataSource = dt;
         }
+
+        private void OrderList_Enter(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            db.connect();
+            DataTable dt = db.showDBTable("select * from request");
+            dataGridView1.DataSource = dt;
+        }
+
+        private void Findbookpage_Enter(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            db.connect();
+            DataTable dt = db.showDBTable("select * from books");
+            FindGridView.DataSource = dt;
+        }
+
+        private void Returnbookpage_Enter(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            db.connect();
+            DataTable dt = db.showDBTable("select * from rental");
+            RtnGridView.DataSource = dt;
+        }
+
+        private void Mgrbookpage_Enter(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            db.connect();
+            DataTable dt = db.showDBTable("select * from books");
+            MgrGridView.DataSource = dt;
+        }
     }
 
 }
