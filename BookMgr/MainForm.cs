@@ -25,9 +25,16 @@ namespace BookMgr
 
         private void Loginbtn_Click(object sender, EventArgs e)
         {
-            if (IDtxt.Text == "root" && PWtxt.Text == "1234") //로그인확인
+            string id = IDtxt.Text, pw = PWtxt.Text;
+            DB db = new DB();
+            db.connect();
+            string login = db.userCheck(id);
+            string usrName = db.userName(id);
+            db.close();
+            if (login == pw) //로그인확인
             {
                 Loginpnl.Visible = true;
+                Namelbl.Text = usrName;
             }
             else
             {

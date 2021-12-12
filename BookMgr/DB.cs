@@ -55,21 +55,21 @@ namespace BookMgr
             return dt;
         }
 
-        public void userCheck(String ID, String PW)
+        public string userCheck(String ID)
         {
             DataSet ds = new DataSet();
             MySqlDataAdapter com = new MySqlDataAdapter("select PW from user where id = '" + ID + "'", con);
-            try
-            {
-                com.Fill(ds, "user");
-
-                
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-                MessageBox.Show("DB오류가 발생했습니다.");
-            }
+                com.Fill(ds);
+                String str = ds.Tables[0].Rows[0]["PW"].ToString();
+                return str;
+        }
+        public string userName(String ID)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select Name from user where id = '" + ID + "'", con);
+            com.Fill(ds);
+            String str = ds.Tables[0].Rows[0]["Name"].ToString();
+            return str;
         }
     }
 }
