@@ -12,6 +12,8 @@ namespace BookMgr
 {
     public partial class JoinForm : Form
     {
+        DB db = new DB();
+        bool dupCheck;
         public JoinForm()
         {
             InitializeComponent();
@@ -29,7 +31,12 @@ namespace BookMgr
 
         public void CheckBox() //체크박스 확인
         {
-            if (Agree1chk.Checked == true && Agree2chk.Checked == true)
+            if (AllAgreechk.Checked == true)
+            {
+                Agree1chk.Checked = true;
+                Agree2chk.Checked = true;
+            }
+            else if (Agree1chk.Checked == true && Agree2chk.Checked == true)
             {
                 AllAgreechk.Checked = true;
             }
@@ -73,7 +80,11 @@ namespace BookMgr
 
         private void SameCheckbtn_Click(object sender, EventArgs e) // 중복확인 버튼
         {
-            if (IDtxt.Text == "1234") //아이디중복화인
+            string id = IDtxt.Text;
+            db.connect();
+            bool dup = db.dupCheck(id);
+            db.close();
+            if (dup) //아이디중복화인
             {
                 MessageBox.Show("이미 등록된 아이디입니다.", "아이디 중복", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 IDtxt.Text = "";
@@ -85,6 +96,8 @@ namespace BookMgr
             } else 
             {
                 MessageBox.Show("사용가능한 아이디입니다.", "아이디 사용가능", MessageBoxButtons.OK, MessageBoxIcon.None);
+                dupCheck = true;
+                IDtxt.Enabled = false;
             }
         }
 
@@ -93,6 +106,10 @@ namespace BookMgr
             if (IDtxt.Text == "" || PW1txt.Text == "" || PW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt.Text == "")
             {
                 MessageBox.Show("필수 항목을 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if(!dupCheck)
+            {
+                MessageBox.Show("중복 확인을 해주세요.", "비밀번호 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (PW1txt.Text != PW2txt.Text)
             {
@@ -103,6 +120,9 @@ namespace BookMgr
                 DialogResult result = MessageBox.Show("회원가입을 하시겠습니까?", "회원가입", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
+                    string sql = "insert into user(`ID`, `PW`, `Email`, `Tel`, `Name`, `Rank`) values('" + IDtxt.Text +"', '" + PW1txt.Text + "', '" + Emailtxt.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '1');";
+                    db.connect();
+                    db.insertQuery(sql);
                     Joinpnl.Visible = true;
 
                 }

@@ -26,21 +26,20 @@ namespace BookMgr
         private void Loginbtn_Click(object sender, EventArgs e) // 로그인 버튼
         {
             string id = IDtxt.Text, pw = PWtxt.Text;
-            DB db = new DB();
-            db.connect();
-            string login = db.userCheck(id);
-            string usrName = db.userName(id);
-            db.close();
-            if (login == pw) //로그인확인
-            {
-                Loginpnl.Visible = true;
-                Namelbl.Text = usrName;
-            }
-            else
-            {
-                MessageBox.Show("ID 혹은 비밀번호를 잘못 입력하셨거나 등록되지 않은 ID입니다.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
+                DB db = new DB();
+                db.connect();
+                string login = db.userCheck(id);
+                string usrName = db.userName(id);
+                db.close();
+                if (login == pw) //로그인확인
+                {
+                    Loginpnl.Visible = true;
+                    Namelbl.Text = usrName;
+                }
+                else
+                {
+                    MessageBox.Show("ID 혹은 비밀번호를 잘못 입력하셨거나 등록되지 않은 ID입니다.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
         }
         private void Loginbtn_KeyUp(object sender, KeyEventArgs e)
         {

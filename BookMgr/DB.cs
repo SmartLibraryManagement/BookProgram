@@ -59,17 +59,46 @@ namespace BookMgr
         {
             DataSet ds = new DataSet();
             MySqlDataAdapter com = new MySqlDataAdapter("select PW from user where id = '" + ID + "'", con);
-                com.Fill(ds);
+            com.Fill(ds);
+            try
+            {
                 String str = ds.Tables[0].Rows[0]["PW"].ToString();
                 return str;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
         }
         public string userName(String ID)
         {
             DataSet ds = new DataSet();
             MySqlDataAdapter com = new MySqlDataAdapter("select Name from user where id = '" + ID + "'", con);
             com.Fill(ds);
-            String str = ds.Tables[0].Rows[0]["Name"].ToString();
-            return str;
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["Name"].ToString();
+                return str;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        public bool dupCheck(string ID)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select * from user where id = '" + ID + "'", con);
+            com.Fill(ds);
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["ID"].ToString();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }
