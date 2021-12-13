@@ -66,12 +66,12 @@ namespace BookMgr
             CheckBox();
         }
 
-        private void PrevPage1btn_Click(object sender, EventArgs e)
+        private void PrevPage1btn_Click(object sender, EventArgs e) // 이전 페이지 버튼
         {
             UserDatapnl.Visible = false;
         }
 
-        private void SameCheckbtn_Click(object sender, EventArgs e)
+        private void SameCheckbtn_Click(object sender, EventArgs e) // 중복확인 버튼
         {
             if (IDtxt.Text == "1234") //아이디중복화인
             {
@@ -79,13 +79,16 @@ namespace BookMgr
                 IDtxt.Text = "";
                 
             }
-            else
+            else if (IDtxt.Text == "")
+            {
+                MessageBox.Show("아이디를 입력하여 주세요", "아이디 입력", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } else 
             {
                 MessageBox.Show("사용가능한 아이디입니다.", "아이디 사용가능", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
         }
 
-        private void NextPage1btn_Click(object sender, EventArgs e) //다음페이지 조건 충족확인
+        private void NextPage1btn_Click(object sender, EventArgs e) //다음페이지 버튼 조건 충족확인
         {
             if (IDtxt.Text == "" || PW1txt.Text == "" || PW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt.Text == "")
             {
@@ -116,9 +119,14 @@ namespace BookMgr
 
         }
 
-        private void Homebtn_Click(object sender, EventArgs e)
+        private void Homebtn_Click(object sender, EventArgs e) // 홈으로 버튼
         {
             this.Close();
+        }
+
+        private void Joinpnl_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

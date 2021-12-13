@@ -27,11 +27,13 @@ namespace BookMgr
             if (FindName1txt.Text == "" || FindEmail1txt.Text == "")
             {
                 MessageBox.Show("빈칸을 입력해주세요", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
             else
+            {
                 MessageBox.Show("이메일로 아이디를 보냈습니다", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
         }
-
         private void FindPWbtn_Click(object sender, EventArgs e) //비밀번호 찾기 버튼
         {
             if (FindName2txt.Text == "" || FindEmail2txt.Text == ""||FindIDtxt.Text == "")
@@ -39,10 +41,11 @@ namespace BookMgr
                 MessageBox.Show("빈칸을 입력해주세요", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
+
                 MessageBox.Show("이메일로 비밀번호를 보냈습니다", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
-        private void Homebtn_Click(object sender, EventArgs e) //되돌아가기
+        private void Homebtn_Click(object sender, EventArgs e) // 홈으로 버튼
         {
             this.Close();
         }

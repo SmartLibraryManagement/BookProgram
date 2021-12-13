@@ -103,7 +103,7 @@ namespace BookMgr
             this.label3.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label3.Location = new System.Drawing.Point(177, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 39);
+            this.label3.Size = new System.Drawing.Size(125, 37);
             this.label3.TabIndex = 4;
             this.label3.Text = "약관동의";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -228,6 +228,7 @@ namespace BookMgr
             this.Joinpnl.Size = new System.Drawing.Size(484, 681);
             this.Joinpnl.TabIndex = 32;
             this.Joinpnl.Visible = false;
+            this.Joinpnl.Paint += new System.Windows.Forms.PaintEventHandler(this.Joinpnl_Paint);
             // 
             // Homebtn
             // 
@@ -265,7 +266,7 @@ namespace BookMgr
             this.label18.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label18.Location = new System.Drawing.Point(174, 24);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(120, 39);
+            this.label18.Size = new System.Drawing.Size(126, 37);
             this.label18.TabIndex = 33;
             this.label18.Text = "K-형제들";
             // 
@@ -479,7 +480,7 @@ namespace BookMgr
             this.label6.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label6.Location = new System.Drawing.Point(157, 24);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 39);
+            this.label6.Size = new System.Drawing.Size(179, 37);
             this.label6.TabIndex = 7;
             this.label6.Text = "회원정보입력";
             // 
@@ -570,7 +571,7 @@ namespace BookMgr
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label Meberlbl;
         private System.Windows.Forms.Button Homebtn;
+        private System.Windows.Forms.Label Meberlbl;
     }
 }
