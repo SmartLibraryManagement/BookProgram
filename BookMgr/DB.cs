@@ -7,7 +7,7 @@ namespace BookMgr
 {
     class DB
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=123456");
+        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=1234");
         public void connect()
         {
             if (con.State.ToString().Equals("Closed"))
@@ -92,6 +92,21 @@ namespace BookMgr
             try
             {
                 String str = ds.Tables[0].Rows[0]["Name"].ToString();
+                return str;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public string RankCheck(string ID)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select Name from user where id = '" + ID + "'", con);
+            com.Fill(ds);
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["Rank"].ToString();
                 return str;
             }
             catch

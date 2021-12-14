@@ -28,12 +28,32 @@ namespace BookMgr
             db.connect();
             string login = db.PWCheck(id);
             string usrName = db.NameCheck(id);
+            string rank = db.RankCheck(id);
             uNum = db.userCheck(id);
             db.close();
             if (login == pw) //로그인확인
             {
-                Loginpnl.Visible = true;
-                Namelbl.Text = usrName;
+                if(rank == "3")
+                {
+                    Loginpnl.Visible = true;
+                    Namelbl.Text = usrName;
+                    Treeptr.Visible = true;
+                    Ranklbl.Text = "나무";
+                }
+                else if (rank == "2")
+                {
+                    Loginpnl.Visible = true;
+                    Namelbl.Text = usrName;              
+                    Leafptr.Visible = true;
+                    Ranklbl.Text = "새싹";
+                }
+                else if (rank == "1")
+                {
+                    Loginpnl.Visible = true;
+                    Namelbl.Text = usrName;
+                    Seedptr.Visible = true;
+                    Ranklbl.Text = "씨앗";
+                }
             }
             else
             {
@@ -93,6 +113,9 @@ namespace BookMgr
                 Loginpnl.Visible = false;
                 Book.Visible = false;
                 User.Visible = false;
+                Treeptr.Visible = false;
+                Leafptr.Visible = false;
+                Seedptr.Visible = false;
                 IDtxt.Text = "아이디";
                 PWtxt.Text = "비밀번호";
                 IDtxt.ForeColor = Color.Silver;
@@ -351,6 +374,8 @@ namespace BookMgr
             db.rental(uNum, bNum);
             db.close();
         }
+
+
 
         private void FindGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
