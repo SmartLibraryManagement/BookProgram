@@ -33,24 +33,20 @@ namespace BookMgr
             db.close();
             if (login == pw) //로그인확인
             {
-                if(rank == "3")
+                Loginpnl.Visible = true;
+                Namelbl.Text = usrName;
+                if (rank == "3")
                 {
-                    Loginpnl.Visible = true;
-                    Namelbl.Text = usrName;
                     Treeptr.Visible = true;
                     Ranklbl.Text = "나무";
                 }
                 else if (rank == "2")
                 {
-                    Loginpnl.Visible = true;
-                    Namelbl.Text = usrName;              
                     Leafptr.Visible = true;
                     Ranklbl.Text = "새싹";
                 }
                 else if (rank == "1")
                 {
-                    Loginpnl.Visible = true;
-                    Namelbl.Text = usrName;
                     Seedptr.Visible = true;
                     Ranklbl.Text = "씨앗";
                 }
