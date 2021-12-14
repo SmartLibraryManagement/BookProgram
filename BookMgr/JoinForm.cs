@@ -46,9 +46,18 @@ namespace BookMgr
             }
         }
 
-        private void AllAgreechk_CheckedChanged(object sender, EventArgs e)//전체동의 코드
+        private void AllAgreechk_Click(object sender, EventArgs e)
         {
-            CheckBox();
+            if(!Agree1chk.Checked || !Agree2chk.Checked)
+            {
+                Agree1chk.Checked = true;
+                Agree2chk.Checked = true;
+            }
+            else
+            {
+                Agree1chk.Checked = false;
+                Agree2chk.Checked = false;
+            }
         }
 
         private void NextPagebtn_Click(object sender, EventArgs e)//체크사항 확인
@@ -65,12 +74,12 @@ namespace BookMgr
 
         private void Agree1chk_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox();
+            AllAgreechk.Checked = Agree1chk.Checked && Agree2chk.Checked;
         }
 
         private void Agree2chk_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox();
+            AllAgreechk.Checked = Agree1chk.Checked && Agree2chk.Checked;
         }
 
         private void PrevPage1btn_Click(object sender, EventArgs e) // 이전 페이지 버튼
@@ -103,7 +112,7 @@ namespace BookMgr
 
         private void NextPage1btn_Click(object sender, EventArgs e) //다음페이지 버튼 조건 충족확인
         {
-            if (IDtxt.Text == "" || PW1txt.Text == "" || PW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt.Text == "")
+            if (IDtxt.Text == "" || PW1txt.Text == "" || PW2txt.Text == "" || Emailtxt.Text == "" || EmailCbx.Text == "" || Nametxt.Text == "" || Teltxt.Text == "")
             {
                 MessageBox.Show("필수 항목을 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -120,7 +129,7 @@ namespace BookMgr
                 DialogResult result = MessageBox.Show("회원가입을 하시겠습니까?", "회원가입", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = "insert into user(`ID`, `PW`, `Email`, `Tel`, `Name`, `Rank`) values('" + IDtxt.Text +"', '" + PW1txt.Text + "', '" + Emailtxt.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '1');";
+                    string sql = "insert into user(`ID`, `PW`, `Email`, `Tel`, `Name`, `Rank`) values('" + IDtxt.Text +"', '" + PW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '1');";
                     db.connect();
                     db.insertQuery(sql);
                     Joinpnl.Visible = true;

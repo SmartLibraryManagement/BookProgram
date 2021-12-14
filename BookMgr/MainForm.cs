@@ -1,17 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BookMgr
 {
     public partial class MainForm : Form
     {
+        DB db = new DB();
+        string uNum, bNum;
         public MainForm()
         {
             InitializeComponent();
@@ -25,36 +23,23 @@ namespace BookMgr
 
         private void Loginbtn_Click(object sender, EventArgs e) // 로그인 버튼
         {
-            string id = IDtxt.Text, pw = PWtxt.Text;
-                DB db = new DB();
-                db.connect();
-                string login = db.userCheck(id);
-                string usrName = db.userName(id);
-                db.close();
-                if (login == pw) //로그인확인
-                {
-                    Loginpnl.Visible = true;
-                    Namelbl.Text = usrName;
-                }
-                else
-                {
-                    MessageBox.Show("ID 혹은 비밀번호를 잘못 입력하셨거나 등록되지 않은 ID입니다.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+            string id = IDtxt.Text;
+            string pw = PWtxt.Text;
+            db.connect();
+            string login = db.PWCheck(id);
+            string usrName = db.NameCheck(id);
+            uNum = db.userCheck(id);
+            db.close();
+            if (login == pw) //로그인확인
+            {
+                Loginpnl.Visible = true;
+                Namelbl.Text = usrName;
+            }
+            else
+            {
+                MessageBox.Show("ID 혹은 비밀번호를 잘못 입력하셨거나 등록되지 않은 ID입니다.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
-        private void Loginbtn_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
-        private void Verlbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void IDtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void IDtxt_Enter(object sender, EventArgs e) // 
         {
             //텍스트박스 워터마크설정
@@ -94,38 +79,11 @@ namespace BookMgr
                 PWtxt.ForeColor = Color.Silver;
             }
         }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
 
-        }
         private void Joinlbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) // 회원가입
         {
             JoinForm joinform = new JoinForm();  // 회원가입 폼 열기
             joinform.Show();
-        }
-        private void Passwordtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void GoHomebtn_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void MemberMenubtn_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void BookMenubtn_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Userlbl_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
         private void Logoutbtn_Click_1(object sender, EventArgs e) // 로그아웃 버튼
         {
@@ -139,41 +97,20 @@ namespace BookMgr
                 PWtxt.Text = "비밀번호";
                 IDtxt.ForeColor = Color.Silver;
                 PWtxt.ForeColor = Color.Silver;
-            }  
+            }
         }
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e) // 북메뉴 버튼
+        private void bookBtn_Click(object sender, EventArgs e) // 북메뉴 버튼
         {
             Book.Visible = true;
             User.Visible = false;
         }
 
-        private void button3_Click(object sender, EventArgs e) // 유저메뉴 버튼
+        private void userBtn_Click(object sender, EventArgs e) // 유저메뉴 버튼
         {
             Book.Visible = false;
             User.Visible = true;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Nextbtn_Click(object sender, EventArgs e)
         {
             if (CheckPWtxt.Text == "1234") //비밀번호 확인
             {
@@ -185,17 +122,6 @@ namespace BookMgr
                 MessageBox.Show("비밀번호를 잘못 입력했습니다.", "비밀번호 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        private void CheckPWtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserDataUpdatepnl_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void SameCheckbtn_Click(object sender, EventArgs e) // 유저-회원정보수정-아이디중복확인 버튼
         {
             String UpID = UpdateIDtxt.Text;
@@ -232,7 +158,9 @@ namespace BookMgr
             else if (Frdo.Checked == false && Mrdo.Checked == false) // 성별 선택 오류
             {
                 MessageBox.Show("성별을 선택하여 주세요.", "성별선택 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } else {   // 수정완료 제어
+            }
+            else
+            {   // 수정완료 제어
                 DialogResult result = MessageBox.Show("회원정보를 수정하시겠습니까?", "회원정보수정", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
@@ -259,45 +187,9 @@ namespace BookMgr
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e) // 유저-도서신청-구글사이트버튼
+        private void Googlebtn_Click(object sender, EventArgs e) // 유저-도서신청-구글사이트버튼
         {
             System.Diagnostics.Process.Start("https://books.google.co.kr"); //구글도서사이트 연결
-        }
-
-        private void OrderBook_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MgrOrder_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-        private void DatabaseMgrbtn_Click(object sender, EventArgs e) //데이터베이스관리
-        {
-
-        }
-
-        private void RankMgrbtn_Click(object sender, EventArgs e)//회원등급관리
-        {
-
-        }
-
-
-
-        private void button2_Click(object sender, EventArgs e) // 홈 버튼
-        {
-            User.Visible = false;
-            Book.Visible = false;
         }
 
         private void UserRank_Load(object sender, EventArgs e)
@@ -306,30 +198,31 @@ namespace BookMgr
             db.connect();
             DataTable dt = db.showDBTable("select * from user");
             dataGridView3.DataSource = dt;
+            db.close();
         }
 
         private void OrderList_Enter(object sender, EventArgs e)
         {
-            DB db = new DB();
             db.connect();
             DataTable dt = db.showDBTable("select * from request");
             dataGridView1.DataSource = dt;
+            db.close();
         }
 
         private void Findbookpage_Enter(object sender, EventArgs e)
         {
-            DB db = new DB();
             db.connect();
             DataTable dt = db.showDBTable("select * from books");
             FindGridView.DataSource = dt;
+            db.close();
         }
 
         private void Returnbookpage_Enter(object sender, EventArgs e)
         {
-            DB db = new DB();
             db.connect();
             DataTable dt = db.showDBTable("select * from rental");
             RtnGridView.DataSource = dt;
+            db.close();
         }
 
         private void Mgrbookpage_Enter(object sender, EventArgs e)
@@ -338,18 +231,8 @@ namespace BookMgr
             db.connect();
             DataTable dt = db.showDBTable("select * from books");
             MgrGridView.DataSource = dt;
+            db.close();
         }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
         private void UserDelbtn_Click(object sender, EventArgs e) // 사용자-회원정보 수정-회원 탈퇴 버튼
         {
 
@@ -398,6 +281,41 @@ namespace BookMgr
         private void SrchBookbtn_Click(object sender, EventArgs e) // 도서-도서검색-도서검색 버튼
         {
 
+            string title = SrchTitletxt.Text, publisher = SrchPublishertxt.Text, author = Srchauthortxt.Text, date = SrchDatetxt.Text, ISBN = SrchISBNtxt.Text;
+            string query = "SELECT * FROM Books WHERE ";
+            var list = new List<string>();
+            if (title.Length > 0)
+            {
+                list.Add("title like '%" + title + "%'");
+            }
+            if (publisher.Length > 0)
+            {
+                list.Add("publisher like '%" + publisher + "%'");
+            }
+            if (author.Length > 0)
+            {
+                list.Add("author like '%" + author + "%'");
+            }
+            if (date.Length > 0)
+            {
+                list.Add("publish_date ='" + date + "'");
+            }
+            if (ISBN.Length > 0)
+            {
+                list.Add("isbn = '" + ISBN + "'");
+            }
+            if (list.Count > 0)
+            {
+                query += string.Join(" AND ", list.ToArray());
+                db.connect();
+                DataTable dt = db.bookSerach(query);
+                FindGridView.DataSource = dt;
+                db.close();
+            }
+            else
+            {
+                MessageBox.Show("항목을 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void Longbtn_Click(object sender, EventArgs e) // 도서-도서반납-연장하기 버튼
@@ -427,6 +345,28 @@ namespace BookMgr
             User.Visible = true;
         }
 
+        private void rntBookBtn_Click(object sender, EventArgs e)
+        {
+            db.connect();
+            db.rental(uNum, bNum);
+            db.close();
+        }
+
+        private void FindGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                bNum = FindGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                SrchTitletxt.Text = FindGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                Srchauthortxt.Text = FindGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                SrchPublishertxt.Text = FindGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                SrchDatetxt.Text = FindGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+                SrchISBNtxt.Text = FindGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
+            catch
+            {
+            }
+        }
     }
 
 }
