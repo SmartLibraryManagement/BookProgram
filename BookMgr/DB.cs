@@ -24,6 +24,58 @@ namespace BookMgr
             }
         }
 
+        //public void userSort()
+        //{
+        //    string sql = "set @count = 0;";
+        //    string sql1 = "update user set user.user_num = @count:=@count+1;";
+        //    MySqlCommand com = new MySqlCommand(sql, con);
+        //    MySqlCommand comm = new MySqlCommand(sql1, con);
+        //    try
+        //    {
+        //        com.ExecuteNonQuery();
+        //                        comm.ExecuteNonQuery();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //        MessageBox.Show("DB오류가 발생했습니다.");
+        //    }
+        //}
+
+        //public void bookSort()
+        //{
+        //    string sql = "set @count = 0;";
+        //    string sql1 = "update books set books.book_num = @count:=@count+1;";
+        //    MySqlCommand com = new MySqlCommand(sql, con);
+        //    MySqlCommand comm = new MySqlCommand(sql1, con);
+        //    try
+        //    {
+        //        com.ExecuteNonQuery();
+        //        comm.ExecuteNonQuery();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //        MessageBox.Show("DB오류가 발생했습니다.");
+        //    }
+        //}
+        //public void rentalSort()
+        //{
+        //    string sql = "set @count = 0;";
+        //    string sql1 = "update rental set rental.rental_num = @count:=@count+1;";
+        //    MySqlCommand com = new MySqlCommand(sql, con);
+        //    MySqlCommand comm = new MySqlCommand(sql1, con);
+        //    try
+        //    {
+        //        comm.ExecuteNonQuery();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //        MessageBox.Show("DB오류가 발생했습니다.");
+        //    }
+        //}
+
         public void insertQuery(String sql)
         {
 
@@ -32,7 +84,7 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("성공");
+                    MessageBox.Show("등록 성공");
                 }
                 else
                 {
@@ -140,13 +192,77 @@ namespace BookMgr
             return dt;
         }
 
-        public void rental(string uNum, string bNum)
+        public void rental(string uNum, string bNum)    //대출
         {
             DateTime date = DateTime.Today;
             string Tdate = date.ToString("d");
             string rDate = date.AddDays(14).ToString("d");
             string sql = "insert into rental(Book_Num, User_Num, Rental_Date, Return_Date) values ('" + bNum + "', '" + uNum + "', '" + Tdate + "', '" + rDate + "');" ;
            
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
+
+        public void rtBook(string sql)    //반납
+        {
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
+        public void rankUp(string ID)
+        {
+            string sql = "update user set user.rank = 2 where id = '" + ID + "';";
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
+
+        public void rankDown(string ID)
+        {
+            string sql = "update user set user.rank = 1 where id = '" + ID + "';";
             MySqlCommand com = new MySqlCommand(sql, con);
             try
             {

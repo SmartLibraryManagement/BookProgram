@@ -132,6 +132,7 @@ namespace BookMgr
                     string sql = "insert into user(`ID`, `PW`, `Email`, `Tel`, `Name`, `Rank`) values('" + IDtxt.Text +"', '" + PW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '1');";
                     db.connect();
                     db.insertQuery(sql);
+                    db.close();
                     Joinpnl.Visible = true;
 
                 }

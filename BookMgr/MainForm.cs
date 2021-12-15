@@ -9,7 +9,7 @@ namespace BookMgr
     public partial class MainForm : Form
     {
         DB db = new DB();
-        string uNum, bNum;
+        string uNum, bNum, mId;
         public MainForm()
         {
             InitializeComponent();
@@ -23,6 +23,8 @@ namespace BookMgr
 
         private void Loginbtn_Click(object sender, EventArgs e) // 로그인 버튼
         {
+            Book.TabPages.Remove(Mgrbookpage);
+            User.TabPages.Remove(MgrOrder);
             string id = IDtxt.Text;
             string pw = PWtxt.Text;
             db.connect();
@@ -39,6 +41,8 @@ namespace BookMgr
                 {
                     Treeptr.Visible = true;
                     Ranklbl.Text = "나무";
+                    Book.TabPages.Add(Mgrbookpage);
+                    User.TabPages.Add(MgrOrder);
                 }
                 else if (rank == "2")
                 {
@@ -239,7 +243,7 @@ namespace BookMgr
         private void Returnbookpage_Enter(object sender, EventArgs e)
         {
             db.connect();
-            DataTable dt = db.showDBTable("select * from rental");
+            DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '"+ uNum +"'; ");
             RtnGridView.DataSource = dt;
             db.close();
         }
@@ -289,12 +293,36 @@ namespace BookMgr
 
         private void RankUpbtn_Click(object sender, EventArgs e)  // 유저-신청관리-회원등급관리-등급올리기 버튼
         {
-
+            db.connect();
+            string rank = db.RankCheck(mId);
+            if (rank == "1")
+            {
+                db.rankUp(mId);
+                DataTable dt = db.showDBTable("select * from user");
+                dataGridView3.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("등급을 올릴수 없습니다.");
+            }
+            db.close();
         }
 
         private void RankDown_Click(object sender, EventArgs e) // 유저-신청관리-회원등급관리-등급내리기 버튼
         {
-
+            db.connect();
+            string rank = db.RankCheck(mId);
+            if (rank == "2")
+            {
+                db.rankDown(mId);
+                DataTable dt = db.showDBTable("select * from user");
+                dataGridView3.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("등급을 내릴수 없습니다.");
+            }
+            db.close();
         }
 
         private void SrchBookbtn_Click(object sender, EventArgs e) // 도서-도서검색-도서검색 버튼
@@ -344,17 +372,61 @@ namespace BookMgr
 
         private void Rtnbtn_Click(object sender, EventArgs e) // 도서-도서반납-반납하기 버튼
         {
-
+            DialogResult result = MessageBox.Show("반납을 하시겠습니까?", "도서반납", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                string sql = "delete from rental where rental_num = '" + bNum + "';";
+                db.connect();
+                db.rtBook(sql);
+                DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '" + uNum + "'; ");
+                RtnGridView.DataSource = dt;
+                db.close();
+            }
         }
 
         private void PutBookbtn_Click(object sender, EventArgs e) // 도서-도서관리-도서등록 버튼
         {
-
+            if (MgrTitletxt.Text == "" || MgrDatetxt.Text == "" || MgrAuthortxt.Text == "" || MgrPublishertxt.Text == "" || MgrISBNtxt.Text == "")
+            {
+                MessageBox.Show("항목을 모두 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("도서 등록을 하시겠습니까?", "도서등록", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string sql = "insert into books(title, author, publisher, publish_date, isbn) values('" + MgrTitletxt.Text + "', '" + MgrAuthortxt.Text + "', '" + MgrPublishertxt.Text + "', '" + MgrDatetxt.Text + "', '" + MgrISBNtxt.Text + "');";
+                    db.connect();
+                    db.insertQuery(sql);
+                    DataTable dt = db.showDBTable("select * from books");
+                    MgrGridView.DataSource = dt;
+                    db.close();
+                    MgrTitletxt.Text = "";
+                    MgrDatetxt.Text = "";
+                    MgrAuthortxt.Text = "";
+                    MgrPublishertxt.Text = "";
+                    MgrISBNtxt.Text = "";
+                }
+            }
         }
 
         private void DelBookbtn_Click(object sender, EventArgs e) // 도서-도서관리-도서삭제 버튼
         {
-
+            DialogResult result = MessageBox.Show("도서를 삭제 하시겠습니까?", "도서삭제", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                string sql = "delete from books where book_num = '" + bNum + "';";
+                db.connect();
+                db.rtBook(sql);
+                DataTable dt = db.showDBTable("select * from books");
+                MgrGridView.DataSource = dt;
+                db.close();
+                MgrTitletxt.Text = "";
+                MgrDatetxt.Text = "";
+                MgrAuthortxt.Text = "";
+                MgrPublishertxt.Text = "";
+                MgrISBNtxt.Text = "";
+            }
         }
         private void ListBookbtn_Click(object sender, EventArgs e) // 도서-도서관리-신청목록 버튼
         {
@@ -366,12 +438,50 @@ namespace BookMgr
 
         private void rntBookBtn_Click(object sender, EventArgs e)
         {
-            db.connect();
-            db.rental(uNum, bNum);
-            db.close();
+            DialogResult result = MessageBox.Show("도서 대여를 하시겠습니까?", "도서대여", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                db.connect();
+                db.rental(uNum, bNum);
+                db.close();
+            }
+
         }
 
+        private void Srchauthortxt_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void RtnGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                bNum = RtnGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                RtnTitletxt.Text = RtnGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                RtnAuthortxt.Text = RtnGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                RtnPublishertxt.Text = RtnGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                RtnDatetxt.Text = RtnGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+            catch
+            {
+            }
+        }
+
+        private void MgrGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            bNum = MgrGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+            MgrTitletxt.Text = MgrGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+            MgrAuthortxt.Text = MgrGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+            MgrPublishertxt.Text = MgrGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+            MgrDatetxt.Text = MgrGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+            MgrISBNtxt.Text = MgrGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            mId = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
 
         private void FindGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
