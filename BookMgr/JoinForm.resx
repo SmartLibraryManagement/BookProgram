@@ -202,19 +202,36 @@ K-형제들 홈페이지에서는 정보주체의 회원 가입일로부터 서�
         fAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Homebtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="NextPage1btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
+        fAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="PrevPage1btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -249,36 +266,19 @@ K-형제들 홈페이지에서는 정보주체의 회원 가입일로부터 서�
         atWqVatWbV9tbPwPv+XANcUB6n4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="NextPage1btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Homebtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
-        fAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABGdBTUEAALGPC/xhBQAAAjhJREFUaEPt
+        2LuPTGEYx/FxCRI0LkGnUCBKiVY0RIg/gMIf4N5QSLQqDRGVikItEiFItBQSgmyzolK4NCTufH8rb/Lk
+        5Hfm2J1zZuYkzzf5JLuz78y8T3bnnDc7yLIsy7Isy7L+tggv8XDuu+b244+xHlPfVvxG2fQPbMCwejvw
+        ZbiNy1nU1buBl+E93KajWSxGtV4NvBdus8PsRKw3A9+F26icwaXKY9FNlKZ+4LX4BrfJ74gb3YJfcGs/
+        YxWmeuBjcJuTB3DpNvUM7jly3TwmEx1Ym34FtzE5gNJyfET1InUU7rl1JjbwNsR7a/QJGrB0ENU18SK1
+        Gl9QXeNMZOArcJuRa4g9glsnNxC7BbcuGuvAurd+gNuIfts7UNoInajc2kgXqZUo7YJbVzSd0FprH9wG
+        ZAb6PJfOwa0b5jBKS/AWbp3sQafdg3tjOYWSLkZv4Nb9jyeInYdbJ3fQek331nUo6SLk1s2X7s+bUdqE
+        uo+G9rYGrXQC7k3kPmI6Ibl1o7iI2GO4dXIcI/Uc7oVFJ6CSTkS66Lh1bXiHpSgdglsnL7Dg9KdafUEd
+        GuK99Qiqa7qyG6UV0H2+uiZ+vBbUSZQXu6oHQk8R32wcbiOm+3352Wk90Eavsf3fl3PpAlF36B+Hr9BZ
+        oKS96ZbYWW1diUcx1pNWDjwBOXCX5cANfkLHwmHme9Wf6oHjfzzqugD33Do5cJflwA1yYFMO3CAH7rIc
+        uEEObMqBG+TAWZZlWZZlWTa2BoO/ZNiz6SQ8cFYAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

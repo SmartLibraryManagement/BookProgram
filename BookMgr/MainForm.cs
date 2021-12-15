@@ -189,7 +189,7 @@ namespace BookMgr
         private void Updatebtn_Click(object sender, EventArgs e) // 유저-회원정보수정-수정완료 버튼
         {
 
-            if (UpdatePW1txt.Text == "" || UpdatePW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt.Text == "") // 입력오류 
+            if (UpdatePW1txt.Text == "" || UpdatePW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt1.Text == "") // 입력오류 
             {
                 MessageBox.Show("필수 항목을 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -202,7 +202,7 @@ namespace BookMgr
                 DialogResult result = MessageBox.Show("회원정보를 수정하시겠습니까?", "회원정보수정", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = "update user set(`PW`, `Email`, `Tel`, `Name`, `Adress`) = ('" + UpdatePW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '" + Addresstxt.Text + "');";
+                    string sql = "update user set(`PW`, `Email`, `Tel`, `Name`, `Adress`) = ('" + UpdatePW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt1.Text + "', '" + Nametxt.Text + "', '" + Addresstxt.Text + "');";
                     db.connect();
                     db.insertQuery(sql);
                     db.close();
@@ -379,7 +379,7 @@ namespace BookMgr
         private void SrchBookbtn_Click(object sender, EventArgs e) // 도서-도서검색-도서검색 버튼
         {
 
-            string title = SrchTitletxt.Text, publisher = SrchPublishertxt.Text, author = Srchauthortxt.Text, date = SrchDatetxt.Text, ISBN = SrchISBNtxt.Text;
+            string title = SrchTitletxt.Text, publisher = SrchPublishertxt.Text, author = Srchauthortxt.Text, date = SrchDatetxt1.Text, ISBN = SrchISBNtxt.Text;
             string query = "SELECT * FROM Books WHERE ";
             var list = new List<string>();
             if (title.Length > 0)
@@ -542,7 +542,7 @@ namespace BookMgr
                 SrchTitletxt.Text = FindGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                 Srchauthortxt.Text = FindGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
                 SrchPublishertxt.Text = FindGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-                SrchDatetxt.Text = FindGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+                SrchDatetxt1.Text = FindGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
                 SrchISBNtxt.Text = FindGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
             catch
