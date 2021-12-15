@@ -588,11 +588,11 @@ namespace BookMgr
         private System.Windows.Forms.ComboBox EmailCbx;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel Joinpnl;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button Homebtn;
         private System.Windows.Forms.Label Meberlbl;
+        private System.Windows.Forms.Panel Joinpnl;
     }
 }

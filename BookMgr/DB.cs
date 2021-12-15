@@ -33,7 +33,7 @@ namespace BookMgr
         //    try
         //    {
         //        com.ExecuteNonQuery();
-        //                        comm.ExecuteNonQuery();
+        //        comm.ExecuteNonQuery();
         //    }
         //    catch (Exception e)
         //    {
@@ -125,6 +125,21 @@ namespace BookMgr
         {
             DataSet ds = new DataSet();
             MySqlDataAdapter com = new MySqlDataAdapter("select PW from user where id = '" + ID + "'", con);
+            com.Fill(ds);
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["PW"].ToString();
+                return str;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public string PCheck(String user)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select PW from user where user_num = '" + user + "'", con);
             com.Fill(ds);
             try
             {
@@ -261,6 +276,50 @@ namespace BookMgr
         }
 
         public void rankDown(string ID)
+        {
+            string sql = "update user set user.rank = 1 where id = '" + ID + "';";
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
+
+        public void userScs(string ID)
+        {
+            string sql = "update user set user.rank = 0 where user_num = '" + ID + "';";
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
+
+        public void returnUser(string ID)
         {
             string sql = "update user set user.rank = 1 where id = '" + ID + "';";
             MySqlCommand com = new MySqlCommand(sql, con);

@@ -25,6 +25,7 @@ namespace BookMgr
         {
             Book.TabPages.Remove(Mgrbookpage);
             User.TabPages.Remove(MgrOrder);
+            User.TabPages.Remove(UserData);
             string id = IDtxt.Text;
             string pw = PWtxt.Text;
             db.connect();
@@ -35,24 +36,38 @@ namespace BookMgr
             db.close();
             if (login == pw) //로그인확인
             {
-                Loginpnl.Visible = true;
-                Namelbl.Text = usrName;
-                if (rank == "3")
+                if (rank == "0")
                 {
-                    Treeptr.Visible = true;
-                    Ranklbl.Text = "나무";
-                    Book.TabPages.Add(Mgrbookpage);
-                    User.TabPages.Add(MgrOrder);
+                    MessageBox.Show("탈퇴신청중입니다.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (rank == "2")
+                else
                 {
-                    Leafptr.Visible = true;
-                    Ranklbl.Text = "새싹";
-                }
-                else if (rank == "1")
-                {
-                    Seedptr.Visible = true;
-                    Ranklbl.Text = "씨앗";
+                    Loginpnl.Visible = true;
+                    Namelbl.Text = usrName;
+                    if (rank == "3")
+                    {
+                        Treeptr.Visible = true;
+                        Ranklbl.Text = "나무";
+                        Book.TabPages.Add(Mgrbookpage);
+                        User.TabPages.Add(MgrOrder);
+                    }
+                    else if (rank == "2")
+                    {
+                        Leafptr.Visible = true;
+                        Ranklbl.Text = "새싹";
+                        User.TabPages.Remove(OrderBook);
+                        User.TabPages.Add(UserData);
+                        User.TabPages.Add(OrderBook);
+
+                    }
+                    else if (rank == "1")
+                    {
+                        Seedptr.Visible = true;
+                        Ranklbl.Text = "씨앗";
+                        User.TabPages.Remove(OrderBook);
+                        User.TabPages.Add(UserData);
+                        User.TabPages.Add(OrderBook);
+                    }
                 }
             }
             else
@@ -116,6 +131,7 @@ namespace BookMgr
                 Treeptr.Visible = false;
                 Leafptr.Visible = false;
                 Seedptr.Visible = false;
+                UserDataUpdatepnl.Visible = false;
                 IDtxt.Text = "아이디";
                 PWtxt.Text = "비밀번호";
                 IDtxt.ForeColor = Color.Silver;
@@ -126,6 +142,7 @@ namespace BookMgr
         {
             Book.Visible = true;
             User.Visible = false;
+            UserDataUpdatepnl.Visible = false;
         }
 
         private void userBtn_Click(object sender, EventArgs e) // 유저메뉴 버튼
@@ -135,7 +152,9 @@ namespace BookMgr
         }
         private void Nextbtn_Click(object sender, EventArgs e)
         {
-            if (CheckPWtxt.Text == "1234") //비밀번호 확인
+            db.connect();
+            string pw = db.PCheck(uNum);
+            if (CheckPWtxt.Text == pw) //비밀번호 확인
             {
                 UserDataUpdatepnl.Visible = true;
                 CheckPWtxt.Text = "";
@@ -170,7 +189,7 @@ namespace BookMgr
         private void Updatebtn_Click(object sender, EventArgs e) // 유저-회원정보수정-수정완료 버튼
         {
 
-            if (UpdateIDtxt.Text == "" || UpdatePW1txt.Text == "" || UpdatePW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt.Text == "") // 입력오류 
+            if (UpdatePW1txt.Text == "" || UpdatePW2txt.Text == "" || Emailtxt.Text == "" || Nametxt.Text == "" || Teltxt.Text == "") // 입력오류 
             {
                 MessageBox.Show("필수 항목을 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -178,17 +197,16 @@ namespace BookMgr
             {
                 MessageBox.Show("비밀번호가 일치하지 않습니다.", "비밀번호 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (Frdo.Checked == false && Mrdo.Checked == false) // 성별 선택 오류
-            {
-                MessageBox.Show("성별을 선택하여 주세요.", "성별선택 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
             else
             {   // 수정완료 제어
                 DialogResult result = MessageBox.Show("회원정보를 수정하시겠습니까?", "회원정보수정", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
+                    string sql = "update user set(`PW`, `Email`, `Tel`, `Name`, `Adress`) = ('" + UpdatePW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '" + Addresstxt.Text + "');";
+                    db.connect();
+                    db.insertQuery(sql);
+                    db.close();
                     UserDataUpdatepnl.Visible = false;
-
                 }
             }
         }
@@ -250,15 +268,39 @@ namespace BookMgr
 
         private void Mgrbookpage_Enter(object sender, EventArgs e)
         {
-            DB db = new DB();
             db.connect();
             DataTable dt = db.showDBTable("select * from books");
             MgrGridView.DataSource = dt;
             db.close();
         }
+
+        private void Sucession_Enter(object sender, EventArgs e)
+        {
+            db.connect();
+            DataTable dt = db.showDBTable("select * from user where user.rank = 0");
+            dataGridView2.DataSource = dt;
+            db.close();
+        }
+
         private void UserDelbtn_Click(object sender, EventArgs e) // 사용자-회원정보 수정-회원 탈퇴 버튼
         {
-
+            DialogResult result = MessageBox.Show("탈퇴하시겠습니까?", "회원탈퇴", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                db.connect();
+                db.userScs(uNum);
+                db.close();
+                Loginpnl.Visible = false;
+                Book.Visible = false;
+                User.Visible = false;
+                Treeptr.Visible = false;
+                Leafptr.Visible = false;
+                Seedptr.Visible = false;
+                IDtxt.Text = "아이디";
+                PWtxt.Text = "비밀번호";
+                IDtxt.ForeColor = Color.Silver;
+                PWtxt.ForeColor = Color.Silver;
+            }
         }
 
         private void AllSelectBtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-전체선택 버튼
@@ -276,9 +318,13 @@ namespace BookMgr
 
         }
 
-        private void ListDel1btn_Click(object sender, EventArgs e) // 유저-신청관리-회원탈퇴신청-목록제거 버튼
+        private void kickNo_Click(object sender, EventArgs e) // 유저-신청관리-회원탈퇴신청-탈퇴취소 버튼
         {
-
+            db.connect();
+            db.returnUser(mId);
+            DataTable dt = db.showDBTable("select * from user where user.rank = 0");
+            dataGridView2.DataSource = dt;
+            db.close();
         }
         private void BookPutbtn_Click(object sender, EventArgs e) // // 유저-신청관리-도서신청관리-도서등록 버튼
         {
@@ -288,7 +334,12 @@ namespace BookMgr
         }
         private void KickOkbtn_Click(object sender, EventArgs e)  // 유저-신청관리-회원탈퇴신청-탈퇴승인 버튼
         {
-
+            string sql = "delete from user where ID = '" + mId + "';";
+            db.connect();
+            db.rtBook(sql);
+            DataTable dt = db.showDBTable("select * from user where user.rank = 0");
+            dataGridView2.DataSource = dt;
+            db.close();
         }
 
         private void RankUpbtn_Click(object sender, EventArgs e)  // 유저-신청관리-회원등급관리-등급올리기 버튼
@@ -448,11 +499,6 @@ namespace BookMgr
 
         }
 
-        private void Srchauthortxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void RtnGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
@@ -476,6 +522,11 @@ namespace BookMgr
             MgrPublishertxt.Text = MgrGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
             MgrDatetxt.Text = MgrGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
             MgrISBNtxt.Text = MgrGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+        }
+
+        private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            mId = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
         }
 
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

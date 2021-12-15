@@ -129,12 +129,11 @@ namespace BookMgr
                 DialogResult result = MessageBox.Show("회원가입을 하시겠습니까?", "회원가입", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = "insert into user(`ID`, `PW`, `Email`, `Tel`, `Name`, `Rank`) values('" + IDtxt.Text +"', '" + PW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '1');";
+                    string sql = "insert into user(`ID`, `PW`, `Email`, `Tel`, `Name`, `adress`, `Rank`) values('" + IDtxt.Text +"', '" + PW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '" + Addresstxt.Text + "', '1');";
                     db.connect();
                     db.insertQuery(sql);
                     db.close();
                     Joinpnl.Visible = true;
-
                 }
             }
         }
