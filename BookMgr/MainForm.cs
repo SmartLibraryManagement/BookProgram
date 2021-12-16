@@ -79,6 +79,7 @@ namespace BookMgr
             string rank = db.RankCheck(id);
             uNum = db.userCheck(id);
             db.close();
+
             if (login == pw) //로그인확인
             {
                 if (rank == "0")
@@ -120,9 +121,8 @@ namespace BookMgr
                 MessageBox.Show("ID 혹은 비밀번호를 잘못 입력하셨거나 등록되지 않은 ID입니다.", "로그인 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void IDtxt_Enter(object sender, EventArgs e) // 
+        private void IDtxt_Enter(object sender, EventArgs e)    //아이디 워터마크설정
         {
-            //텍스트박스 워터마크설정
             if (IDtxt.ForeColor == Color.Silver)
             {
                 IDtxt.Text = "";
@@ -130,9 +130,8 @@ namespace BookMgr
             }
         }
 
-        private void IDtxt_Leave(object sender, EventArgs e)
+        private void IDtxt_Leave(object sender, EventArgs e)    //아이디 워터마크설정
         {
-            //텍스트박스 워터마크설정
             if (IDtxt.Text == "")
             {
                 IDtxt.Text = "아이디";
@@ -140,9 +139,8 @@ namespace BookMgr
             }
         }
 
-        private void Passwordtxt_Enter(object sender, EventArgs e)
+        private void Passwordtxt_Enter(object sender, EventArgs e)  //비밀번호 워터마크설정
         {
-            //텍스트박스 워터마크설정
             if (PWtxt.ForeColor == Color.Silver)
             {
                 PWtxt.Text = "";
@@ -150,9 +148,8 @@ namespace BookMgr
             }
         }
 
-        private void Passwordtxt_Leave(object sender, EventArgs e)
+        private void Passwordtxt_Leave(object sender, EventArgs e)  //비밀번호 워터마크설정
         {
-            //텍스트박스 워터마크설정
             if (PWtxt.Text == "")
             {
                 PWtxt.Text = "비밀번호";
@@ -186,11 +183,11 @@ namespace BookMgr
             Book.Visible = false;
             User.Visible = true;
         }
-        private void Nextbtn_Click(object sender, EventArgs e)
+        private void Nextbtn_Click(object sender, EventArgs e)  //회원정보수정 비밀번호 확인
         {
             db.connect();
             string pw = db.PCheck(uNum);
-            if (CheckPWtxt.Text == pw) //비밀번호 확인
+            if (CheckPWtxt.Text == pw)
             {
                 UserDataUpdatepnl.Visible = true;
                 CheckPWtxt.Text = "";
@@ -223,6 +220,13 @@ namespace BookMgr
                     db.insertQuery(sql);
                     db.close();
                     UserDataUpdatepnl.Visible = false;
+                    UpdatePW1txt.Text = "";
+                    UpdatePW2txt.Text = "";
+                    Emailtxt.Text = "";
+                    EmailCbx.Text = "";
+                    Nametxt.Text = "";
+                    Teltxt.Text = "";
+                    Addresstxt.Text = "";
                 }
             }
         }
@@ -241,7 +245,10 @@ namespace BookMgr
                 db.bookOrder(sql);
                 db.close();
                 MessageBox.Show("신청이 완료되었습니다.", "도서신청", MessageBoxButtons.OK, MessageBoxIcon.None);
-
+                OrderTitletxt.Text = "";
+                OrderAuthortxt.Text = "";
+                OrderPublishertxt.Text = "";
+                OrderDatetxt.Text = "";
             }
         }
 
@@ -330,7 +337,7 @@ namespace BookMgr
 
         private void ListDelbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-목록제거 버튼
         {
-            DialogResult result = MessageBox.Show("탈퇴하시겠습니까?", "회원탈퇴", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("제거하시겠습니까?", "목록제거", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 string sql = "delete from request where request_num = '" + bNum + "';";
@@ -339,6 +346,7 @@ namespace BookMgr
                 DataTable dt = db.showDBTable("select * from request");
                 dataGridView1.DataSource = dt;
                 db.close();
+                bNum = null;
             }
         }
 
@@ -349,6 +357,7 @@ namespace BookMgr
             DataTable dt = db.showDBTable("select * from user where user.rank = 0");
             dataGridView2.DataSource = dt;
             db.close();
+            mId = null;
         }
         private void BookPutbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-도서등록 버튼
         {
@@ -359,6 +368,7 @@ namespace BookMgr
             Book.SelectedTab = Book.TabPages[2];
             User.Visible = false;
             Book.Visible = true;
+            bNum = null;
         }
         private void KickOkbtn_Click(object sender, EventArgs e)  // 유저-신청관리-회원탈퇴신청-탈퇴승인 버튼
         {
@@ -368,6 +378,7 @@ namespace BookMgr
             DataTable dt = db.showDBTable("select * from user where user.rank = 0");
             dataGridView2.DataSource = dt;
             db.close();
+            mId = null;
         }
 
         private void RankUpbtn_Click(object sender, EventArgs e)  // 유저-신청관리-회원등급관리-등급올리기 버튼
@@ -385,6 +396,7 @@ namespace BookMgr
                 MessageBox.Show("등급을 올릴수 없습니다.");
             }
             db.close();
+            mId = null;
         }
 
         private void RankDown_Click(object sender, EventArgs e) // 유저-신청관리-회원등급관리-등급내리기 버튼
@@ -402,6 +414,7 @@ namespace BookMgr
                 MessageBox.Show("등급을 내릴수 없습니다.");
             }
             db.close();
+            mId = null;
         }
 
         private void SrchBookbtn_Click(object sender, EventArgs e) // 도서-도서검색-도서검색 버튼
@@ -437,6 +450,11 @@ namespace BookMgr
                 DataTable dt = db.bookSerach(query);
                 FindGridView.DataSource = dt;
                 db.close();
+                SrchTitletxt.Text = "";
+                SrchPublishertxt.Text = "";
+                Srchauthortxt.Text = "";
+                SrchDatetxt.Text = "";
+                SrchISBNtxt.Text = "";
             }
             else
             {
@@ -454,6 +472,7 @@ namespace BookMgr
                 DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '" + uNum + "'; ");
                 RtnGridView.DataSource = dt;
                 db.close();
+                bNum = null;
             }
         }
 
@@ -468,6 +487,7 @@ namespace BookMgr
                 DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '" + uNum + "'; ");
                 RtnGridView.DataSource = dt;
                 db.close();
+                bNum = null;
             }
         }
 
@@ -513,6 +533,7 @@ namespace BookMgr
                 MgrAuthortxt.Text = "";
                 MgrPublishertxt.Text = "";
                 MgrISBNtxt.Text = "";
+                bNum = null;
             }
         }
         private void ListBookbtn_Click(object sender, EventArgs e) // 도서-도서관리-신청목록 버튼
@@ -523,7 +544,7 @@ namespace BookMgr
             User.Visible = true;
         }
 
-        private void rntBookBtn_Click(object sender, EventArgs e)
+        private void rntBookBtn_Click(object sender, EventArgs e)   //도서-도서검색-도서대여버튼
         {
             DialogResult result = MessageBox.Show("도서 대여를 하시겠습니까?", "도서대여", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
@@ -531,6 +552,7 @@ namespace BookMgr
                 db.connect();
                 db.rental(uNum, bNum);
                 db.close();
+                bNum = null;
             }
 
         }
