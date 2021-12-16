@@ -7,7 +7,7 @@ namespace BookMgr
 {
     class DB
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=1234");
+        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=123456");
         public void connect()
         {
             if (con.State.ToString().Equals("Closed"))
@@ -248,6 +248,22 @@ namespace BookMgr
             }
         }
 
+        public bool rentalState(string num)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select * from rental where user_num = '" + num + "'", con);
+            com.Fill(ds);
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["rental_num"].ToString();
+                return false;
+            }
+            catch
+            {
+                return true;
+            }
+        }
+
         public void extRental(string bNum)    //연장
         {
             DateTime date;
@@ -376,6 +392,27 @@ namespace BookMgr
         public void returnUser(string ID)
         {
             string sql = "update user set user.rank = 1 where id = '" + ID + "';";
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
+
+        public void bookOrder(string sql)
+        {
             MySqlCommand com = new MySqlCommand(sql, con);
             try
             {

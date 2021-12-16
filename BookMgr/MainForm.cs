@@ -226,18 +226,19 @@ namespace BookMgr
 
         private void Orderbtn_Click(object sender, EventArgs e) // 유저-도서신청-신청하기버튼
         {
+            string title = OrderTitletxt.Text, author = OrderAuthortxt.Text, publisher = OrderPublishertxt.Text, date = OrderDatetxt.Text;
             if (OrderTitletxt.Text == "" || OrderAuthortxt.Text == "" || OrderPublishertxt.Text == "" || OrderDatetxt.Text == "")
             {
                 MessageBox.Show("항목을 입력해주세요.", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                DialogResult result = MessageBox.Show("신청이 완료되었습니다.", "도서신청", MessageBoxButtons.OK, MessageBoxIcon.None);
-                if (result == DialogResult.OK)
-                {
-
-
-                }
+                string sql = "insert into request(Title, Author, Publisher, Publish_Date, user_num) values ('" + title + "', '" + author + "', '" + publisher + "', '" + date + "', '" + uNum + "');";
+                db.connect();
+                db.bookOrder(sql);
+                db.close();
+                MessageBox.Show("신청이 완료되었습니다.", "도서신청", MessageBoxButtons.OK, MessageBoxIcon.None);
+                
             }
         }
 
@@ -301,18 +302,26 @@ namespace BookMgr
             if (result == DialogResult.Yes)
             {
                 db.connect();
-                db.userScs(uNum);
+                bool state = db.rentalState(uNum);
+                if(state)
+                {
+                    db.userScs(uNum);
+                    Loginpnl.Visible = false;
+                    Book.Visible = false;
+                    User.Visible = false;
+                    Treeptr.Visible = false;
+                    Leafptr.Visible = false;
+                    Seedptr.Visible = false;
+                    IDtxt.Text = "아이디";
+                    PWtxt.Text = "비밀번호";
+                    IDtxt.ForeColor = Color.Silver;
+                    PWtxt.ForeColor = Color.Silver;
+                }
+                else
+                {
+                    MessageBox.Show("대여중인 책이 존재합니다.", "탈퇴오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 db.close();
-                Loginpnl.Visible = false;
-                Book.Visible = false;
-                User.Visible = false;
-                Treeptr.Visible = false;
-                Leafptr.Visible = false;
-                Seedptr.Visible = false;
-                IDtxt.Text = "아이디";
-                PWtxt.Text = "비밀번호";
-                IDtxt.ForeColor = Color.Silver;
-                PWtxt.ForeColor = Color.Silver;
             }
         }
 
@@ -331,6 +340,7 @@ namespace BookMgr
         }
         private void BookPutbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-도서등록 버튼
         {
+
             Book.SelectedTab = Book.TabPages[2];
             User.Visible = false;
             Book.Visible = true;
