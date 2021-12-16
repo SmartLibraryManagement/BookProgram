@@ -55,48 +55,6 @@ namespace BookMgr
             this.Logoutbtn = new System.Windows.Forms.Button();
             this.userBtn = new System.Windows.Forms.Button();
             this.bookBtn = new System.Windows.Forms.Button();
-            this.Book = new System.Windows.Forms.TabControl();
-            this.Findbookpage = new System.Windows.Forms.TabPage();
-            this.SrchDatetxt = new System.Windows.Forms.TextBox();
-            this.rntBookBtn = new System.Windows.Forms.Button();
-            this.SrchBookbtn = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.SrchPublishertxt = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Srchauthortxt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.SrchISBNtxt = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SrchTitletxt = new System.Windows.Forms.TextBox();
-            this.FindGridView = new System.Windows.Forms.DataGridView();
-            this.Returnbookpage = new System.Windows.Forms.TabPage();
-            this.Longbtn = new System.Windows.Forms.Button();
-            this.Rtnbtn = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.RtnDatetxt = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.RtnPublishertxt = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.RtnAuthortxt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.RtnTitletxt = new System.Windows.Forms.TextBox();
-            this.RtnGridView = new System.Windows.Forms.DataGridView();
-            this.Mgrbookpage = new System.Windows.Forms.TabPage();
-            this.ListBookbtn = new System.Windows.Forms.Button();
-            this.PutBookbtn = new System.Windows.Forms.Button();
-            this.DelBookbtn = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.MgrISBNtxt = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.MgrPublishertxt = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.MgrAuthortxt = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.MgrDatetxt = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.MgrTitletxt = new System.Windows.Forms.TextBox();
-            this.MgrGridView = new System.Windows.Forms.DataGridView();
             this.User = new System.Windows.Forms.TabControl();
             this.UserData = new System.Windows.Forms.TabPage();
             this.UserDataUpdatepnl = new System.Windows.Forms.Panel();
@@ -149,6 +107,48 @@ namespace BookMgr
             this.RankDown = new System.Windows.Forms.Button();
             this.RankUpbtn = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.Book = new System.Windows.Forms.TabControl();
+            this.Findbookpage = new System.Windows.Forms.TabPage();
+            this.SrchDatetxt = new System.Windows.Forms.TextBox();
+            this.rntBookBtn = new System.Windows.Forms.Button();
+            this.SrchBookbtn = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SrchPublishertxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Srchauthortxt = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.SrchISBNtxt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SrchTitletxt = new System.Windows.Forms.TextBox();
+            this.FindGridView = new System.Windows.Forms.DataGridView();
+            this.Returnbookpage = new System.Windows.Forms.TabPage();
+            this.Longbtn = new System.Windows.Forms.Button();
+            this.Rtnbtn = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.RtnDatetxt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.RtnPublishertxt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.RtnAuthortxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.RtnTitletxt = new System.Windows.Forms.TextBox();
+            this.RtnGridView = new System.Windows.Forms.DataGridView();
+            this.Mgrbookpage = new System.Windows.Forms.TabPage();
+            this.ListBookbtn = new System.Windows.Forms.Button();
+            this.PutBookbtn = new System.Windows.Forms.Button();
+            this.DelBookbtn = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.MgrISBNtxt = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.MgrPublishertxt = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.MgrAuthortxt = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.MgrDatetxt = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.MgrTitletxt = new System.Windows.Forms.TextBox();
+            this.MgrGridView = new System.Windows.Forms.DataGridView();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Timer = new System.Windows.Forms.Timer(this.components);
@@ -156,13 +156,6 @@ namespace BookMgr
             ((System.ComponentModel.ISupportInitialize)(this.Seedptr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Leafptr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Treeptr)).BeginInit();
-            this.Book.SuspendLayout();
-            this.Findbookpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FindGridView)).BeginInit();
-            this.Returnbookpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RtnGridView)).BeginInit();
-            this.Mgrbookpage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MgrGridView)).BeginInit();
             this.User.SuspendLayout();
             this.UserData.SuspendLayout();
             this.UserDataUpdatepnl.SuspendLayout();
@@ -175,6 +168,13 @@ namespace BookMgr
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.UserRank.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.Book.SuspendLayout();
+            this.Findbookpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FindGridView)).BeginInit();
+            this.Returnbookpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RtnGridView)).BeginInit();
+            this.Mgrbookpage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MgrGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // BookMenubtn
@@ -232,7 +232,7 @@ namespace BookMgr
             this.FindIDPasswordlbl.Font = new System.Drawing.Font("굴림", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.FindIDPasswordlbl.Location = new System.Drawing.Point(608, 404);
             this.FindIDPasswordlbl.Name = "FindIDPasswordlbl";
-            this.FindIDPasswordlbl.Size = new System.Drawing.Size(274, 81);
+            this.FindIDPasswordlbl.Size = new System.Drawing.Size(262, 87);
             this.FindIDPasswordlbl.TabIndex = 5;
             this.FindIDPasswordlbl.Text = "K-형제들";
             // 
@@ -402,7 +402,7 @@ namespace BookMgr
             this.Nimlbl.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.Nimlbl.Location = new System.Drawing.Point(1266, 45);
             this.Nimlbl.Name = "Nimlbl";
-            this.Nimlbl.Size = new System.Drawing.Size(54, 46);
+            this.Nimlbl.Size = new System.Drawing.Size(53, 49);
             this.Nimlbl.TabIndex = 21;
             this.Nimlbl.Text = "님";
             // 
@@ -413,7 +413,7 @@ namespace BookMgr
             this.Namelbl.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Namelbl.Location = new System.Drawing.Point(1153, 45);
             this.Namelbl.Name = "Namelbl";
-            this.Namelbl.Size = new System.Drawing.Size(122, 46);
+            this.Namelbl.Size = new System.Drawing.Size(115, 49);
             this.Namelbl.TabIndex = 20;
             this.Namelbl.Text = "홍길동";
             // 
@@ -454,6 +454,656 @@ namespace BookMgr
             this.bookBtn.UseVisualStyleBackColor = false;
             this.bookBtn.Click += new System.EventHandler(this.bookBtn_Click);
             // 
+            // User
+            // 
+            this.User.Controls.Add(this.UserData);
+            this.User.Controls.Add(this.OrderBook);
+            this.User.Controls.Add(this.MgrOrder);
+            this.User.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.User.ItemSize = new System.Drawing.Size(50, 50);
+            this.User.Location = new System.Drawing.Point(5, 146);
+            this.User.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.User.Name = "User";
+            this.User.Padding = new System.Drawing.Point(22, 3);
+            this.User.SelectedIndex = 0;
+            this.User.Size = new System.Drawing.Size(1440, 688);
+            this.User.TabIndex = 26;
+            this.User.Visible = false;
+            // 
+            // UserData
+            // 
+            this.UserData.BackColor = System.Drawing.Color.White;
+            this.UserData.Controls.Add(this.UserDataUpdatepnl);
+            this.UserData.Controls.Add(this.label19);
+            this.UserData.Controls.Add(this.Nextbtn);
+            this.UserData.Controls.Add(this.CheckPWtxt);
+            this.UserData.Controls.Add(this.label1);
+            this.UserData.Location = new System.Drawing.Point(4, 54);
+            this.UserData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserData.Name = "UserData";
+            this.UserData.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserData.Size = new System.Drawing.Size(1432, 630);
+            this.UserData.TabIndex = 0;
+            this.UserData.Text = "회원정보";
+            // 
+            // UserDataUpdatepnl
+            // 
+            this.UserDataUpdatepnl.Controls.Add(this.Teltxt);
+            this.UserDataUpdatepnl.Controls.Add(this.UserDelbtn);
+            this.UserDataUpdatepnl.Controls.Add(this.Updatebtn);
+            this.UserDataUpdatepnl.Controls.Add(this.EmailCbx);
+            this.UserDataUpdatepnl.Controls.Add(this.label41);
+            this.UserDataUpdatepnl.Controls.Add(this.Emailtxt);
+            this.UserDataUpdatepnl.Controls.Add(this.label37);
+            this.UserDataUpdatepnl.Controls.Add(this.Addresstxt);
+            this.UserDataUpdatepnl.Controls.Add(this.label38);
+            this.UserDataUpdatepnl.Controls.Add(this.Nametxt);
+            this.UserDataUpdatepnl.Controls.Add(this.label39);
+            this.UserDataUpdatepnl.Controls.Add(this.label35);
+            this.UserDataUpdatepnl.Controls.Add(this.UpdatePW2txt);
+            this.UserDataUpdatepnl.Controls.Add(this.label34);
+            this.UserDataUpdatepnl.Controls.Add(this.UpdatePW1txt);
+            this.UserDataUpdatepnl.Controls.Add(this.label23);
+            this.UserDataUpdatepnl.Controls.Add(this.label21);
+            this.UserDataUpdatepnl.Controls.Add(this.label20);
+            this.UserDataUpdatepnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UserDataUpdatepnl.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.UserDataUpdatepnl.Location = new System.Drawing.Point(3, 4);
+            this.UserDataUpdatepnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserDataUpdatepnl.Name = "UserDataUpdatepnl";
+            this.UserDataUpdatepnl.Size = new System.Drawing.Size(1426, 622);
+            this.UserDataUpdatepnl.TabIndex = 4;
+            this.UserDataUpdatepnl.Visible = false;
+            // 
+            // Teltxt
+            // 
+            this.Teltxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Teltxt.Location = new System.Drawing.Point(949, 250);
+            this.Teltxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Teltxt.Name = "Teltxt";
+            this.Teltxt.Size = new System.Drawing.Size(285, 30);
+            this.Teltxt.TabIndex = 31;
+            // 
+            // UserDelbtn
+            // 
+            this.UserDelbtn.BackColor = System.Drawing.Color.LightGray;
+            this.UserDelbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.UserDelbtn.Location = new System.Drawing.Point(1161, 471);
+            this.UserDelbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserDelbtn.Name = "UserDelbtn";
+            this.UserDelbtn.Size = new System.Drawing.Size(126, 56);
+            this.UserDelbtn.TabIndex = 30;
+            this.UserDelbtn.Text = "회원탈퇴";
+            this.UserDelbtn.UseVisualStyleBackColor = false;
+            this.UserDelbtn.Click += new System.EventHandler(this.UserDelbtn_Click);
+            // 
+            // Updatebtn
+            // 
+            this.Updatebtn.BackColor = System.Drawing.Color.LightGray;
+            this.Updatebtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Updatebtn.Location = new System.Drawing.Point(1021, 471);
+            this.Updatebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Updatebtn.Name = "Updatebtn";
+            this.Updatebtn.Size = new System.Drawing.Size(126, 56);
+            this.Updatebtn.TabIndex = 29;
+            this.Updatebtn.Text = "수정완료";
+            this.Updatebtn.UseVisualStyleBackColor = false;
+            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
+            // 
+            // EmailCbx
+            // 
+            this.EmailCbx.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.EmailCbx.FormattingEnabled = true;
+            this.EmailCbx.Items.AddRange(new object[] {
+            "naver.com",
+            "gmail.com",
+            "kyungmin.ac.kr",
+            "hanmail.com"});
+            this.EmailCbx.Location = new System.Drawing.Point(470, 251);
+            this.EmailCbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EmailCbx.Name = "EmailCbx";
+            this.EmailCbx.Size = new System.Drawing.Size(188, 28);
+            this.EmailCbx.TabIndex = 28;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(443, 255);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(28, 20);
+            this.label41.TabIndex = 27;
+            this.label41.Text = "@";
+            // 
+            // Emailtxt
+            // 
+            this.Emailtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Emailtxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Emailtxt.Location = new System.Drawing.Point(263, 250);
+            this.Emailtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Emailtxt.Name = "Emailtxt";
+            this.Emailtxt.Size = new System.Drawing.Size(180, 30);
+            this.Emailtxt.TabIndex = 23;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label37.Location = new System.Drawing.Point(800, 256);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(113, 20);
+            this.label37.TabIndex = 20;
+            this.label37.Text = "*전화번호:";
+            // 
+            // Addresstxt
+            // 
+            this.Addresstxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Addresstxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Addresstxt.Location = new System.Drawing.Point(949, 175);
+            this.Addresstxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Addresstxt.Name = "Addresstxt";
+            this.Addresstxt.Size = new System.Drawing.Size(423, 30);
+            this.Addresstxt.TabIndex = 19;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label38.Location = new System.Drawing.Point(800, 181);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(59, 20);
+            this.label38.TabIndex = 18;
+            this.label38.Text = "주소:";
+            // 
+            // Nametxt
+            // 
+            this.Nametxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Nametxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Nametxt.Location = new System.Drawing.Point(949, 100);
+            this.Nametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Nametxt.Name = "Nametxt";
+            this.Nametxt.Size = new System.Drawing.Size(114, 30);
+            this.Nametxt.TabIndex = 17;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label39.Location = new System.Drawing.Point(800, 106);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(71, 20);
+            this.label39.TabIndex = 16;
+            this.label39.Text = "*이름:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label35.Location = new System.Drawing.Point(114, 256);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(92, 20);
+            this.label35.TabIndex = 13;
+            this.label35.Text = "*이메일:";
+            // 
+            // UpdatePW2txt
+            // 
+            this.UpdatePW2txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UpdatePW2txt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.UpdatePW2txt.Location = new System.Drawing.Point(263, 175);
+            this.UpdatePW2txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UpdatePW2txt.Name = "UpdatePW2txt";
+            this.UpdatePW2txt.PasswordChar = '*';
+            this.UpdatePW2txt.Size = new System.Drawing.Size(285, 30);
+            this.UpdatePW2txt.TabIndex = 12;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label34.Location = new System.Drawing.Point(114, 181);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(155, 20);
+            this.label34.TabIndex = 11;
+            this.label34.Text = "*비밀번호확인:";
+            // 
+            // UpdatePW1txt
+            // 
+            this.UpdatePW1txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UpdatePW1txt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.UpdatePW1txt.Location = new System.Drawing.Point(263, 100);
+            this.UpdatePW1txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UpdatePW1txt.Name = "UpdatePW1txt";
+            this.UpdatePW1txt.PasswordChar = '*';
+            this.UpdatePW1txt.Size = new System.Drawing.Size(285, 30);
+            this.UpdatePW1txt.TabIndex = 10;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label23.Location = new System.Drawing.Point(114, 106);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(113, 20);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "*비밀번호:";
+            // 
+            // label21
+            // 
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label21.Location = new System.Drawing.Point(57, 62);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(1314, 2);
+            this.label21.TabIndex = 5;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
+            this.label20.Location = new System.Drawing.Point(591, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(261, 61);
+            this.label20.TabIndex = 4;
+            this.label20.Text = "회원정보수정";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
+            this.label19.Location = new System.Drawing.Point(571, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(273, 61);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "비밀번호 확인";
+            // 
+            // Nextbtn
+            // 
+            this.Nextbtn.Image = ((System.Drawing.Image)(resources.GetObject("Nextbtn.Image")));
+            this.Nextbtn.Location = new System.Drawing.Point(632, 305);
+            this.Nextbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Nextbtn.Name = "Nextbtn";
+            this.Nextbtn.Size = new System.Drawing.Size(103, 112);
+            this.Nextbtn.TabIndex = 2;
+            this.Nextbtn.UseVisualStyleBackColor = true;
+            this.Nextbtn.Click += new System.EventHandler(this.Nextbtn_Click);
+            // 
+            // CheckPWtxt
+            // 
+            this.CheckPWtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CheckPWtxt.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.CheckPWtxt.Location = new System.Drawing.Point(473, 186);
+            this.CheckPWtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CheckPWtxt.Name = "CheckPWtxt";
+            this.CheckPWtxt.PasswordChar = '*';
+            this.CheckPWtxt.Size = new System.Drawing.Size(457, 46);
+            this.CheckPWtxt.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
+            this.label1.Location = new System.Drawing.Point(322, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 49);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "비밀번호:";
+            // 
+            // OrderBook
+            // 
+            this.OrderBook.BackColor = System.Drawing.Color.White;
+            this.OrderBook.Controls.Add(this.Googlebtn);
+            this.OrderBook.Controls.Add(this.label36);
+            this.OrderBook.Controls.Add(this.label42);
+            this.OrderBook.Controls.Add(this.Orderbtn);
+            this.OrderBook.Controls.Add(this.label24);
+            this.OrderBook.Controls.Add(this.OrderDatetxt);
+            this.OrderBook.Controls.Add(this.label25);
+            this.OrderBook.Controls.Add(this.OrderPublishertxt);
+            this.OrderBook.Controls.Add(this.label26);
+            this.OrderBook.Controls.Add(this.OrderAuthortxt);
+            this.OrderBook.Controls.Add(this.label27);
+            this.OrderBook.Controls.Add(this.OrderTitletxt);
+            this.OrderBook.Location = new System.Drawing.Point(4, 54);
+            this.OrderBook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderBook.Name = "OrderBook";
+            this.OrderBook.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderBook.Size = new System.Drawing.Size(1432, 630);
+            this.OrderBook.TabIndex = 1;
+            this.OrderBook.Text = "도서신청";
+            // 
+            // Googlebtn
+            // 
+            this.Googlebtn.Image = ((System.Drawing.Image)(resources.GetObject("Googlebtn.Image")));
+            this.Googlebtn.Location = new System.Drawing.Point(599, 72);
+            this.Googlebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Googlebtn.Name = "Googlebtn";
+            this.Googlebtn.Size = new System.Drawing.Size(249, 79);
+            this.Googlebtn.TabIndex = 14;
+            this.Googlebtn.UseVisualStyleBackColor = true;
+            this.Googlebtn.Click += new System.EventHandler(this.Googlebtn_Click);
+            // 
+            // label36
+            // 
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label36.Location = new System.Drawing.Point(57, 62);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(1314, 2);
+            this.label36.TabIndex = 13;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
+            this.label42.Location = new System.Drawing.Point(626, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(195, 61);
+            this.label42.TabIndex = 12;
+            this.label42.Text = "도서 신청";
+            // 
+            // Orderbtn
+            // 
+            this.Orderbtn.BackColor = System.Drawing.Color.LightGray;
+            this.Orderbtn.Location = new System.Drawing.Point(659, 475);
+            this.Orderbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Orderbtn.Name = "Orderbtn";
+            this.Orderbtn.Size = new System.Drawing.Size(126, 56);
+            this.Orderbtn.TabIndex = 11;
+            this.Orderbtn.Text = "신청하기";
+            this.Orderbtn.UseVisualStyleBackColor = false;
+            this.Orderbtn.Click += new System.EventHandler(this.Orderbtn_Click);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(479, 406);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(80, 20);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "발행일:";
+            // 
+            // OrderDatetxt
+            // 
+            this.OrderDatetxt.BackColor = System.Drawing.Color.White;
+            this.OrderDatetxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OrderDatetxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OrderDatetxt.Location = new System.Drawing.Point(602, 400);
+            this.OrderDatetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderDatetxt.Name = "OrderDatetxt";
+            this.OrderDatetxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderDatetxt.TabIndex = 9;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(479, 331);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(80, 20);
+            this.label25.TabIndex = 8;
+            this.label25.Text = "출판사:";
+            // 
+            // OrderPublishertxt
+            // 
+            this.OrderPublishertxt.BackColor = System.Drawing.Color.White;
+            this.OrderPublishertxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OrderPublishertxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OrderPublishertxt.Location = new System.Drawing.Point(602, 325);
+            this.OrderPublishertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderPublishertxt.Name = "OrderPublishertxt";
+            this.OrderPublishertxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderPublishertxt.TabIndex = 7;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(479, 256);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(59, 20);
+            this.label26.TabIndex = 6;
+            this.label26.Text = "저자:";
+            // 
+            // OrderAuthortxt
+            // 
+            this.OrderAuthortxt.BackColor = System.Drawing.Color.White;
+            this.OrderAuthortxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OrderAuthortxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OrderAuthortxt.Location = new System.Drawing.Point(602, 250);
+            this.OrderAuthortxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderAuthortxt.Name = "OrderAuthortxt";
+            this.OrderAuthortxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderAuthortxt.TabIndex = 5;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(479, 181);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(59, 20);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "제목:";
+            // 
+            // OrderTitletxt
+            // 
+            this.OrderTitletxt.BackColor = System.Drawing.Color.White;
+            this.OrderTitletxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OrderTitletxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.OrderTitletxt.Location = new System.Drawing.Point(602, 175);
+            this.OrderTitletxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderTitletxt.Name = "OrderTitletxt";
+            this.OrderTitletxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderTitletxt.TabIndex = 3;
+            // 
+            // MgrOrder
+            // 
+            this.MgrOrder.BackColor = System.Drawing.Color.White;
+            this.MgrOrder.Controls.Add(this.Order);
+            this.MgrOrder.Location = new System.Drawing.Point(4, 54);
+            this.MgrOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MgrOrder.Name = "MgrOrder";
+            this.MgrOrder.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MgrOrder.Size = new System.Drawing.Size(1432, 630);
+            this.MgrOrder.TabIndex = 2;
+            this.MgrOrder.Text = "신청관리";
+            // 
+            // Order
+            // 
+            this.Order.Controls.Add(this.OrderList);
+            this.Order.Controls.Add(this.Sucession);
+            this.Order.Controls.Add(this.UserRank);
+            this.Order.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Order.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.Order.ItemSize = new System.Drawing.Size(120, 30);
+            this.Order.Location = new System.Drawing.Point(3, 4);
+            this.Order.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Order.Name = "Order";
+            this.Order.SelectedIndex = 0;
+            this.Order.Size = new System.Drawing.Size(1426, 622);
+            this.Order.TabIndex = 0;
+            // 
+            // OrderList
+            // 
+            this.OrderList.BackColor = System.Drawing.Color.White;
+            this.OrderList.Controls.Add(this.BookPutbtn);
+            this.OrderList.Controls.Add(this.ListDelbtn);
+            this.OrderList.Controls.Add(this.dataGridView1);
+            this.OrderList.Location = new System.Drawing.Point(4, 34);
+            this.OrderList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderList.Name = "OrderList";
+            this.OrderList.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrderList.Size = new System.Drawing.Size(1418, 584);
+            this.OrderList.TabIndex = 0;
+            this.OrderList.Text = "도서신청관리";
+            this.OrderList.Enter += new System.EventHandler(this.OrderList_Enter);
+            // 
+            // BookPutbtn
+            // 
+            this.BookPutbtn.BackColor = System.Drawing.Color.LightGray;
+            this.BookPutbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.BookPutbtn.Location = new System.Drawing.Point(1223, 125);
+            this.BookPutbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BookPutbtn.Name = "BookPutbtn";
+            this.BookPutbtn.Size = new System.Drawing.Size(126, 56);
+            this.BookPutbtn.TabIndex = 32;
+            this.BookPutbtn.Text = "도서등록";
+            this.BookPutbtn.UseVisualStyleBackColor = false;
+            this.BookPutbtn.Click += new System.EventHandler(this.BookPutbtn_Click);
+            // 
+            // ListDelbtn
+            // 
+            this.ListDelbtn.BackColor = System.Drawing.Color.LightGray;
+            this.ListDelbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.ListDelbtn.Location = new System.Drawing.Point(1223, 50);
+            this.ListDelbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ListDelbtn.Name = "ListDelbtn";
+            this.ListDelbtn.Size = new System.Drawing.Size(126, 56);
+            this.ListDelbtn.TabIndex = 31;
+            this.ListDelbtn.Text = "목록제거";
+            this.ListDelbtn.UseVisualStyleBackColor = false;
+            this.ListDelbtn.Click += new System.EventHandler(this.ListDelbtn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 38);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1143, 500);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // Sucession
+            // 
+            this.Sucession.BackColor = System.Drawing.Color.White;
+            this.Sucession.Controls.Add(this.KickOkbtn);
+            this.Sucession.Controls.Add(this.kickNobtn);
+            this.Sucession.Controls.Add(this.dataGridView2);
+            this.Sucession.Location = new System.Drawing.Point(4, 34);
+            this.Sucession.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Sucession.Name = "Sucession";
+            this.Sucession.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Sucession.Size = new System.Drawing.Size(1418, 584);
+            this.Sucession.TabIndex = 1;
+            this.Sucession.Text = "회원탈퇴신청";
+            this.Sucession.Enter += new System.EventHandler(this.Sucession_Enter);
+            // 
+            // KickOkbtn
+            // 
+            this.KickOkbtn.BackColor = System.Drawing.Color.LightGray;
+            this.KickOkbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.KickOkbtn.Location = new System.Drawing.Point(1223, 50);
+            this.KickOkbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.KickOkbtn.Name = "KickOkbtn";
+            this.KickOkbtn.Size = new System.Drawing.Size(126, 56);
+            this.KickOkbtn.TabIndex = 36;
+            this.KickOkbtn.Text = "탈퇴승인";
+            this.KickOkbtn.UseVisualStyleBackColor = false;
+            this.KickOkbtn.Click += new System.EventHandler(this.KickOkbtn_Click);
+            // 
+            // kickNobtn
+            // 
+            this.kickNobtn.BackColor = System.Drawing.Color.LightGray;
+            this.kickNobtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.kickNobtn.Location = new System.Drawing.Point(1223, 125);
+            this.kickNobtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.kickNobtn.Name = "kickNobtn";
+            this.kickNobtn.Size = new System.Drawing.Size(126, 56);
+            this.kickNobtn.TabIndex = 35;
+            this.kickNobtn.Text = "탈퇴취소";
+            this.kickNobtn.UseVisualStyleBackColor = false;
+            this.kickNobtn.Click += new System.EventHandler(this.kickNo_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToResizeRows = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(34, 38);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(1143, 500);
+            this.dataGridView2.TabIndex = 33;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
+            // 
+            // UserRank
+            // 
+            this.UserRank.BackColor = System.Drawing.Color.White;
+            this.UserRank.Controls.Add(this.RankDown);
+            this.UserRank.Controls.Add(this.RankUpbtn);
+            this.UserRank.Controls.Add(this.dataGridView3);
+            this.UserRank.Location = new System.Drawing.Point(4, 34);
+            this.UserRank.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserRank.Name = "UserRank";
+            this.UserRank.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.UserRank.Size = new System.Drawing.Size(1418, 584);
+            this.UserRank.TabIndex = 2;
+            this.UserRank.Text = "회원등급관리";
+            this.UserRank.Enter += new System.EventHandler(this.UserRank_Load);
+            // 
+            // RankDown
+            // 
+            this.RankDown.BackColor = System.Drawing.Color.LightGray;
+            this.RankDown.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.RankDown.Location = new System.Drawing.Point(1223, 125);
+            this.RankDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RankDown.Name = "RankDown";
+            this.RankDown.Size = new System.Drawing.Size(126, 56);
+            this.RankDown.TabIndex = 38;
+            this.RankDown.Text = "등급내리기";
+            this.RankDown.UseVisualStyleBackColor = false;
+            this.RankDown.Click += new System.EventHandler(this.RankDown_Click);
+            // 
+            // RankUpbtn
+            // 
+            this.RankUpbtn.BackColor = System.Drawing.Color.LightGray;
+            this.RankUpbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.RankUpbtn.Location = new System.Drawing.Point(1223, 50);
+            this.RankUpbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RankUpbtn.Name = "RankUpbtn";
+            this.RankUpbtn.Size = new System.Drawing.Size(126, 56);
+            this.RankUpbtn.TabIndex = 37;
+            this.RankUpbtn.Text = "등급올리기";
+            this.RankUpbtn.UseVisualStyleBackColor = false;
+            this.RankUpbtn.Click += new System.EventHandler(this.RankUpbtn_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AllowUserToResizeColumns = false;
+            this.dataGridView3.AllowUserToResizeRows = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(34, 38);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersWidth = 51;
+            this.dataGridView3.RowTemplate.Height = 23;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.Size = new System.Drawing.Size(1143, 500);
+            this.dataGridView3.TabIndex = 36;
+            this.dataGridView3.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_CellMouseClick);
+            // 
             // Book
             // 
             this.Book.Controls.Add(this.Findbookpage);
@@ -468,7 +1118,6 @@ namespace BookMgr
             this.Book.SelectedIndex = 0;
             this.Book.Size = new System.Drawing.Size(1440, 688);
             this.Book.TabIndex = 25;
-            this.Book.Visible = false;
             // 
             // Findbookpage
             // 
@@ -957,656 +1606,6 @@ namespace BookMgr
             this.MgrGridView.TabIndex = 2;
             this.MgrGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.MgrGridView_CellMouseClick);
             // 
-            // User
-            // 
-            this.User.Controls.Add(this.UserData);
-            this.User.Controls.Add(this.OrderBook);
-            this.User.Controls.Add(this.MgrOrder);
-            this.User.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.User.ItemSize = new System.Drawing.Size(50, 50);
-            this.User.Location = new System.Drawing.Point(5, 146);
-            this.User.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.User.Name = "User";
-            this.User.Padding = new System.Drawing.Point(22, 3);
-            this.User.SelectedIndex = 0;
-            this.User.Size = new System.Drawing.Size(1440, 688);
-            this.User.TabIndex = 26;
-            this.User.Visible = false;
-            // 
-            // UserData
-            // 
-            this.UserData.BackColor = System.Drawing.Color.White;
-            this.UserData.Controls.Add(this.UserDataUpdatepnl);
-            this.UserData.Controls.Add(this.label19);
-            this.UserData.Controls.Add(this.Nextbtn);
-            this.UserData.Controls.Add(this.CheckPWtxt);
-            this.UserData.Controls.Add(this.label1);
-            this.UserData.Location = new System.Drawing.Point(4, 54);
-            this.UserData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserData.Name = "UserData";
-            this.UserData.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserData.Size = new System.Drawing.Size(1432, 630);
-            this.UserData.TabIndex = 0;
-            this.UserData.Text = "회원정보";
-            // 
-            // UserDataUpdatepnl
-            // 
-            this.UserDataUpdatepnl.Controls.Add(this.Teltxt);
-            this.UserDataUpdatepnl.Controls.Add(this.UserDelbtn);
-            this.UserDataUpdatepnl.Controls.Add(this.Updatebtn);
-            this.UserDataUpdatepnl.Controls.Add(this.EmailCbx);
-            this.UserDataUpdatepnl.Controls.Add(this.label41);
-            this.UserDataUpdatepnl.Controls.Add(this.Emailtxt);
-            this.UserDataUpdatepnl.Controls.Add(this.label37);
-            this.UserDataUpdatepnl.Controls.Add(this.Addresstxt);
-            this.UserDataUpdatepnl.Controls.Add(this.label38);
-            this.UserDataUpdatepnl.Controls.Add(this.Nametxt);
-            this.UserDataUpdatepnl.Controls.Add(this.label39);
-            this.UserDataUpdatepnl.Controls.Add(this.label35);
-            this.UserDataUpdatepnl.Controls.Add(this.UpdatePW2txt);
-            this.UserDataUpdatepnl.Controls.Add(this.label34);
-            this.UserDataUpdatepnl.Controls.Add(this.UpdatePW1txt);
-            this.UserDataUpdatepnl.Controls.Add(this.label23);
-            this.UserDataUpdatepnl.Controls.Add(this.label21);
-            this.UserDataUpdatepnl.Controls.Add(this.label20);
-            this.UserDataUpdatepnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UserDataUpdatepnl.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UserDataUpdatepnl.Location = new System.Drawing.Point(3, 4);
-            this.UserDataUpdatepnl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserDataUpdatepnl.Name = "UserDataUpdatepnl";
-            this.UserDataUpdatepnl.Size = new System.Drawing.Size(1426, 622);
-            this.UserDataUpdatepnl.TabIndex = 4;
-            this.UserDataUpdatepnl.Visible = false;
-            // 
-            // Teltxt
-            // 
-            this.Teltxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Teltxt.Location = new System.Drawing.Point(949, 250);
-            this.Teltxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Teltxt.Name = "Teltxt";
-            this.Teltxt.Size = new System.Drawing.Size(285, 30);
-            this.Teltxt.TabIndex = 31;
-            // 
-            // UserDelbtn
-            // 
-            this.UserDelbtn.BackColor = System.Drawing.Color.LightGray;
-            this.UserDelbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UserDelbtn.Location = new System.Drawing.Point(1161, 471);
-            this.UserDelbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserDelbtn.Name = "UserDelbtn";
-            this.UserDelbtn.Size = new System.Drawing.Size(126, 56);
-            this.UserDelbtn.TabIndex = 30;
-            this.UserDelbtn.Text = "회원탈퇴";
-            this.UserDelbtn.UseVisualStyleBackColor = false;
-            this.UserDelbtn.Click += new System.EventHandler(this.UserDelbtn_Click);
-            // 
-            // Updatebtn
-            // 
-            this.Updatebtn.BackColor = System.Drawing.Color.LightGray;
-            this.Updatebtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Updatebtn.Location = new System.Drawing.Point(1021, 471);
-            this.Updatebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Updatebtn.Name = "Updatebtn";
-            this.Updatebtn.Size = new System.Drawing.Size(126, 56);
-            this.Updatebtn.TabIndex = 29;
-            this.Updatebtn.Text = "수정완료";
-            this.Updatebtn.UseVisualStyleBackColor = false;
-            this.Updatebtn.Click += new System.EventHandler(this.Updatebtn_Click);
-            // 
-            // EmailCbx
-            // 
-            this.EmailCbx.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.EmailCbx.FormattingEnabled = true;
-            this.EmailCbx.Items.AddRange(new object[] {
-            "naver.com",
-            "gmail.com",
-            "kyungmin.ac.kr",
-            "hanmail.com"});
-            this.EmailCbx.Location = new System.Drawing.Point(470, 251);
-            this.EmailCbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.EmailCbx.Name = "EmailCbx";
-            this.EmailCbx.Size = new System.Drawing.Size(188, 28);
-            this.EmailCbx.TabIndex = 28;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(443, 255);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(28, 20);
-            this.label41.TabIndex = 27;
-            this.label41.Text = "@";
-            // 
-            // Emailtxt
-            // 
-            this.Emailtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Emailtxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Emailtxt.Location = new System.Drawing.Point(263, 250);
-            this.Emailtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.Size = new System.Drawing.Size(180, 30);
-            this.Emailtxt.TabIndex = 23;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label37.Location = new System.Drawing.Point(800, 256);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(113, 20);
-            this.label37.TabIndex = 20;
-            this.label37.Text = "*전화번호:";
-            // 
-            // Addresstxt
-            // 
-            this.Addresstxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Addresstxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Addresstxt.Location = new System.Drawing.Point(949, 175);
-            this.Addresstxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Addresstxt.Name = "Addresstxt";
-            this.Addresstxt.Size = new System.Drawing.Size(423, 30);
-            this.Addresstxt.TabIndex = 19;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label38.Location = new System.Drawing.Point(800, 181);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(59, 20);
-            this.label38.TabIndex = 18;
-            this.label38.Text = "주소:";
-            // 
-            // Nametxt
-            // 
-            this.Nametxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Nametxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Nametxt.Location = new System.Drawing.Point(949, 100);
-            this.Nametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Nametxt.Name = "Nametxt";
-            this.Nametxt.Size = new System.Drawing.Size(114, 30);
-            this.Nametxt.TabIndex = 17;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label39.Location = new System.Drawing.Point(800, 106);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(71, 20);
-            this.label39.TabIndex = 16;
-            this.label39.Text = "*이름:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label35.Location = new System.Drawing.Point(114, 256);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(92, 20);
-            this.label35.TabIndex = 13;
-            this.label35.Text = "*이메일:";
-            // 
-            // UpdatePW2txt
-            // 
-            this.UpdatePW2txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UpdatePW2txt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UpdatePW2txt.Location = new System.Drawing.Point(263, 175);
-            this.UpdatePW2txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UpdatePW2txt.Name = "UpdatePW2txt";
-            this.UpdatePW2txt.PasswordChar = '*';
-            this.UpdatePW2txt.Size = new System.Drawing.Size(285, 30);
-            this.UpdatePW2txt.TabIndex = 12;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label34.Location = new System.Drawing.Point(114, 181);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(155, 20);
-            this.label34.TabIndex = 11;
-            this.label34.Text = "*비밀번호확인:";
-            // 
-            // UpdatePW1txt
-            // 
-            this.UpdatePW1txt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UpdatePW1txt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.UpdatePW1txt.Location = new System.Drawing.Point(263, 100);
-            this.UpdatePW1txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UpdatePW1txt.Name = "UpdatePW1txt";
-            this.UpdatePW1txt.PasswordChar = '*';
-            this.UpdatePW1txt.Size = new System.Drawing.Size(285, 30);
-            this.UpdatePW1txt.TabIndex = 10;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label23.Location = new System.Drawing.Point(114, 106);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(113, 20);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "*비밀번호:";
-            // 
-            // label21
-            // 
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label21.Location = new System.Drawing.Point(57, 62);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(1314, 2);
-            this.label21.TabIndex = 5;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
-            this.label20.Location = new System.Drawing.Point(591, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(277, 57);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "회원정보수정";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
-            this.label19.Location = new System.Drawing.Point(571, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(290, 57);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "비밀번호 확인";
-            // 
-            // Nextbtn
-            // 
-            this.Nextbtn.Image = ((System.Drawing.Image)(resources.GetObject("Nextbtn.Image")));
-            this.Nextbtn.Location = new System.Drawing.Point(632, 305);
-            this.Nextbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Nextbtn.Name = "Nextbtn";
-            this.Nextbtn.Size = new System.Drawing.Size(103, 112);
-            this.Nextbtn.TabIndex = 2;
-            this.Nextbtn.UseVisualStyleBackColor = true;
-            this.Nextbtn.Click += new System.EventHandler(this.Nextbtn_Click);
-            // 
-            // CheckPWtxt
-            // 
-            this.CheckPWtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CheckPWtxt.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.CheckPWtxt.Location = new System.Drawing.Point(473, 186);
-            this.CheckPWtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CheckPWtxt.Name = "CheckPWtxt";
-            this.CheckPWtxt.PasswordChar = '*';
-            this.CheckPWtxt.Size = new System.Drawing.Size(457, 46);
-            this.CheckPWtxt.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
-            this.label1.Location = new System.Drawing.Point(322, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "비밀번호:";
-            // 
-            // OrderBook
-            // 
-            this.OrderBook.BackColor = System.Drawing.Color.White;
-            this.OrderBook.Controls.Add(this.Googlebtn);
-            this.OrderBook.Controls.Add(this.label36);
-            this.OrderBook.Controls.Add(this.label42);
-            this.OrderBook.Controls.Add(this.Orderbtn);
-            this.OrderBook.Controls.Add(this.label24);
-            this.OrderBook.Controls.Add(this.OrderDatetxt);
-            this.OrderBook.Controls.Add(this.label25);
-            this.OrderBook.Controls.Add(this.OrderPublishertxt);
-            this.OrderBook.Controls.Add(this.label26);
-            this.OrderBook.Controls.Add(this.OrderAuthortxt);
-            this.OrderBook.Controls.Add(this.label27);
-            this.OrderBook.Controls.Add(this.OrderTitletxt);
-            this.OrderBook.Location = new System.Drawing.Point(4, 54);
-            this.OrderBook.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderBook.Name = "OrderBook";
-            this.OrderBook.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderBook.Size = new System.Drawing.Size(1432, 630);
-            this.OrderBook.TabIndex = 1;
-            this.OrderBook.Text = "도서신청";
-            // 
-            // Googlebtn
-            // 
-            this.Googlebtn.Image = ((System.Drawing.Image)(resources.GetObject("Googlebtn.Image")));
-            this.Googlebtn.Location = new System.Drawing.Point(599, 72);
-            this.Googlebtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Googlebtn.Name = "Googlebtn";
-            this.Googlebtn.Size = new System.Drawing.Size(249, 79);
-            this.Googlebtn.TabIndex = 14;
-            this.Googlebtn.UseVisualStyleBackColor = true;
-            this.Googlebtn.Click += new System.EventHandler(this.Googlebtn_Click);
-            // 
-            // label36
-            // 
-            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label36.Location = new System.Drawing.Point(57, 62);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(1314, 2);
-            this.label36.TabIndex = 13;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
-            this.label42.Location = new System.Drawing.Point(626, 0);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(206, 57);
-            this.label42.TabIndex = 12;
-            this.label42.Text = "도서 신청";
-            // 
-            // Orderbtn
-            // 
-            this.Orderbtn.BackColor = System.Drawing.Color.LightGray;
-            this.Orderbtn.Location = new System.Drawing.Point(659, 475);
-            this.Orderbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Orderbtn.Name = "Orderbtn";
-            this.Orderbtn.Size = new System.Drawing.Size(126, 56);
-            this.Orderbtn.TabIndex = 11;
-            this.Orderbtn.Text = "신청하기";
-            this.Orderbtn.UseVisualStyleBackColor = false;
-            this.Orderbtn.Click += new System.EventHandler(this.Orderbtn_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(479, 406);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(80, 20);
-            this.label24.TabIndex = 10;
-            this.label24.Text = "발행일:";
-            // 
-            // OrderDatetxt
-            // 
-            this.OrderDatetxt.BackColor = System.Drawing.Color.White;
-            this.OrderDatetxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OrderDatetxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.OrderDatetxt.Location = new System.Drawing.Point(602, 400);
-            this.OrderDatetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderDatetxt.Name = "OrderDatetxt";
-            this.OrderDatetxt.Size = new System.Drawing.Size(245, 30);
-            this.OrderDatetxt.TabIndex = 9;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(479, 331);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(80, 20);
-            this.label25.TabIndex = 8;
-            this.label25.Text = "출판사:";
-            // 
-            // OrderPublishertxt
-            // 
-            this.OrderPublishertxt.BackColor = System.Drawing.Color.White;
-            this.OrderPublishertxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OrderPublishertxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.OrderPublishertxt.Location = new System.Drawing.Point(602, 325);
-            this.OrderPublishertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderPublishertxt.Name = "OrderPublishertxt";
-            this.OrderPublishertxt.Size = new System.Drawing.Size(245, 30);
-            this.OrderPublishertxt.TabIndex = 7;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(479, 256);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(59, 20);
-            this.label26.TabIndex = 6;
-            this.label26.Text = "저자:";
-            // 
-            // OrderAuthortxt
-            // 
-            this.OrderAuthortxt.BackColor = System.Drawing.Color.White;
-            this.OrderAuthortxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OrderAuthortxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.OrderAuthortxt.Location = new System.Drawing.Point(602, 250);
-            this.OrderAuthortxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderAuthortxt.Name = "OrderAuthortxt";
-            this.OrderAuthortxt.Size = new System.Drawing.Size(245, 30);
-            this.OrderAuthortxt.TabIndex = 5;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(479, 181);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(59, 20);
-            this.label27.TabIndex = 4;
-            this.label27.Text = "제목:";
-            // 
-            // OrderTitletxt
-            // 
-            this.OrderTitletxt.BackColor = System.Drawing.Color.White;
-            this.OrderTitletxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OrderTitletxt.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.OrderTitletxt.Location = new System.Drawing.Point(602, 175);
-            this.OrderTitletxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderTitletxt.Name = "OrderTitletxt";
-            this.OrderTitletxt.Size = new System.Drawing.Size(245, 30);
-            this.OrderTitletxt.TabIndex = 3;
-            // 
-            // MgrOrder
-            // 
-            this.MgrOrder.BackColor = System.Drawing.Color.White;
-            this.MgrOrder.Controls.Add(this.Order);
-            this.MgrOrder.Location = new System.Drawing.Point(4, 54);
-            this.MgrOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MgrOrder.Name = "MgrOrder";
-            this.MgrOrder.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MgrOrder.Size = new System.Drawing.Size(1432, 630);
-            this.MgrOrder.TabIndex = 2;
-            this.MgrOrder.Text = "신청관리";
-            // 
-            // Order
-            // 
-            this.Order.Controls.Add(this.OrderList);
-            this.Order.Controls.Add(this.Sucession);
-            this.Order.Controls.Add(this.UserRank);
-            this.Order.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Order.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Order.ItemSize = new System.Drawing.Size(120, 30);
-            this.Order.Location = new System.Drawing.Point(3, 4);
-            this.Order.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Order.Name = "Order";
-            this.Order.SelectedIndex = 0;
-            this.Order.Size = new System.Drawing.Size(1426, 622);
-            this.Order.TabIndex = 0;
-            // 
-            // OrderList
-            // 
-            this.OrderList.BackColor = System.Drawing.Color.White;
-            this.OrderList.Controls.Add(this.BookPutbtn);
-            this.OrderList.Controls.Add(this.ListDelbtn);
-            this.OrderList.Controls.Add(this.dataGridView1);
-            this.OrderList.Location = new System.Drawing.Point(4, 34);
-            this.OrderList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderList.Name = "OrderList";
-            this.OrderList.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrderList.Size = new System.Drawing.Size(1418, 584);
-            this.OrderList.TabIndex = 0;
-            this.OrderList.Text = "도서신청관리";
-            this.OrderList.Enter += new System.EventHandler(this.OrderList_Enter);
-            // 
-            // BookPutbtn
-            // 
-            this.BookPutbtn.BackColor = System.Drawing.Color.LightGray;
-            this.BookPutbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.BookPutbtn.Location = new System.Drawing.Point(1223, 125);
-            this.BookPutbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BookPutbtn.Name = "BookPutbtn";
-            this.BookPutbtn.Size = new System.Drawing.Size(126, 56);
-            this.BookPutbtn.TabIndex = 32;
-            this.BookPutbtn.Text = "도서등록";
-            this.BookPutbtn.UseVisualStyleBackColor = false;
-            this.BookPutbtn.Click += new System.EventHandler(this.BookPutbtn_Click);
-            // 
-            // ListDelbtn
-            // 
-            this.ListDelbtn.BackColor = System.Drawing.Color.LightGray;
-            this.ListDelbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ListDelbtn.Location = new System.Drawing.Point(1223, 50);
-            this.ListDelbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ListDelbtn.Name = "ListDelbtn";
-            this.ListDelbtn.Size = new System.Drawing.Size(126, 56);
-            this.ListDelbtn.TabIndex = 31;
-            this.ListDelbtn.Text = "목록제거";
-            this.ListDelbtn.UseVisualStyleBackColor = false;
-            this.ListDelbtn.Click += new System.EventHandler(this.ListDelbtn_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 38);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1143, 500);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // Sucession
-            // 
-            this.Sucession.BackColor = System.Drawing.Color.White;
-            this.Sucession.Controls.Add(this.KickOkbtn);
-            this.Sucession.Controls.Add(this.kickNobtn);
-            this.Sucession.Controls.Add(this.dataGridView2);
-            this.Sucession.Location = new System.Drawing.Point(4, 34);
-            this.Sucession.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Sucession.Name = "Sucession";
-            this.Sucession.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Sucession.Size = new System.Drawing.Size(1418, 584);
-            this.Sucession.TabIndex = 1;
-            this.Sucession.Text = "회원탈퇴신청";
-            this.Sucession.Enter += new System.EventHandler(this.Sucession_Enter);
-            // 
-            // KickOkbtn
-            // 
-            this.KickOkbtn.BackColor = System.Drawing.Color.LightGray;
-            this.KickOkbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.KickOkbtn.Location = new System.Drawing.Point(1223, 50);
-            this.KickOkbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.KickOkbtn.Name = "KickOkbtn";
-            this.KickOkbtn.Size = new System.Drawing.Size(126, 56);
-            this.KickOkbtn.TabIndex = 36;
-            this.KickOkbtn.Text = "탈퇴승인";
-            this.KickOkbtn.UseVisualStyleBackColor = false;
-            this.KickOkbtn.Click += new System.EventHandler(this.KickOkbtn_Click);
-            // 
-            // kickNobtn
-            // 
-            this.kickNobtn.BackColor = System.Drawing.Color.LightGray;
-            this.kickNobtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.kickNobtn.Location = new System.Drawing.Point(1223, 125);
-            this.kickNobtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.kickNobtn.Name = "kickNobtn";
-            this.kickNobtn.Size = new System.Drawing.Size(126, 56);
-            this.kickNobtn.TabIndex = 35;
-            this.kickNobtn.Text = "탈퇴취소";
-            this.kickNobtn.UseVisualStyleBackColor = false;
-            this.kickNobtn.Click += new System.EventHandler(this.kickNo_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeColumns = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(34, 38);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 23;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1143, 500);
-            this.dataGridView2.TabIndex = 33;
-            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
-            // 
-            // UserRank
-            // 
-            this.UserRank.BackColor = System.Drawing.Color.White;
-            this.UserRank.Controls.Add(this.RankDown);
-            this.UserRank.Controls.Add(this.RankUpbtn);
-            this.UserRank.Controls.Add(this.dataGridView3);
-            this.UserRank.Location = new System.Drawing.Point(4, 34);
-            this.UserRank.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserRank.Name = "UserRank";
-            this.UserRank.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.UserRank.Size = new System.Drawing.Size(1418, 584);
-            this.UserRank.TabIndex = 2;
-            this.UserRank.Text = "회원등급관리";
-            this.UserRank.Enter += new System.EventHandler(this.UserRank_Load);
-            // 
-            // RankDown
-            // 
-            this.RankDown.BackColor = System.Drawing.Color.LightGray;
-            this.RankDown.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.RankDown.Location = new System.Drawing.Point(1223, 125);
-            this.RankDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RankDown.Name = "RankDown";
-            this.RankDown.Size = new System.Drawing.Size(126, 56);
-            this.RankDown.TabIndex = 38;
-            this.RankDown.Text = "등급내리기";
-            this.RankDown.UseVisualStyleBackColor = false;
-            this.RankDown.Click += new System.EventHandler(this.RankDown_Click);
-            // 
-            // RankUpbtn
-            // 
-            this.RankUpbtn.BackColor = System.Drawing.Color.LightGray;
-            this.RankUpbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.RankUpbtn.Location = new System.Drawing.Point(1223, 50);
-            this.RankUpbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.RankUpbtn.Name = "RankUpbtn";
-            this.RankUpbtn.Size = new System.Drawing.Size(126, 56);
-            this.RankUpbtn.TabIndex = 37;
-            this.RankUpbtn.Text = "등급올리기";
-            this.RankUpbtn.UseVisualStyleBackColor = false;
-            this.RankUpbtn.Click += new System.EventHandler(this.RankUpbtn_Click);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AllowUserToResizeColumns = false;
-            this.dataGridView3.AllowUserToResizeRows = false;
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(34, 38);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 23;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1143, 500);
-            this.dataGridView3.TabIndex = 36;
-            this.dataGridView3.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_CellMouseClick);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -1641,16 +1640,6 @@ namespace BookMgr
             ((System.ComponentModel.ISupportInitialize)(this.Seedptr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Leafptr)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Treeptr)).EndInit();
-            this.Book.ResumeLayout(false);
-            this.Findbookpage.ResumeLayout(false);
-            this.Findbookpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FindGridView)).EndInit();
-            this.Returnbookpage.ResumeLayout(false);
-            this.Returnbookpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RtnGridView)).EndInit();
-            this.Mgrbookpage.ResumeLayout(false);
-            this.Mgrbookpage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MgrGridView)).EndInit();
             this.User.ResumeLayout(false);
             this.UserData.ResumeLayout(false);
             this.UserData.PerformLayout();
@@ -1666,6 +1655,16 @@ namespace BookMgr
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.UserRank.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.Book.ResumeLayout(false);
+            this.Findbookpage.ResumeLayout(false);
+            this.Findbookpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FindGridView)).EndInit();
+            this.Returnbookpage.ResumeLayout(false);
+            this.Returnbookpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RtnGridView)).EndInit();
+            this.Mgrbookpage.ResumeLayout(false);
+            this.Mgrbookpage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MgrGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -20,13 +20,14 @@ namespace BookMgr
         private void Logout() //로그아웃 처리
         {
             Loginpnl.Visible = false;
-            Book.Visible = false;
+            Book.Visible = true;
             User.Visible = false;
             Treeptr.Visible = false;
             Leafptr.Visible = false;
             Seedptr.Visible = false;
             UserDataUpdatepnl.Visible = false;
             duration = 600;
+            Timer.Tick -= new EventHandler(count_down);
             IDtxt.Text = "아이디";
             PWtxt.Text = "비밀번호";
             IDtxt.ForeColor = Color.Silver;
@@ -64,6 +65,7 @@ namespace BookMgr
             User.TabPages.Remove(MgrOrder);
             User.TabPages.Remove(UserData);
 
+            
             Timer = new System.Windows.Forms.Timer();
             Timer.Tick += new EventHandler(count_down);
             Timer.Interval = 1000;
