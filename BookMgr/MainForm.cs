@@ -10,9 +10,44 @@ namespace BookMgr
     {
         DB db = new DB();
         string uNum, bNum, mId;
+        int duration = 600;
+
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void Logout()
+        {
+            Loginpnl.Visible = false;
+            Book.Visible = false;
+            User.Visible = false;
+            Treeptr.Visible = false;
+            Leafptr.Visible = false;
+            Seedptr.Visible = false;
+            UserDataUpdatepnl.Visible = false;
+            IDtxt.Text = "아이디";
+            PWtxt.Text = "비밀번호";
+            IDtxt.ForeColor = Color.Silver;
+            PWtxt.ForeColor = Color.Silver;
+        }
+        private void count_down(object sender, EventArgs e)
+        {
+            
+           int min = duration % 3600 / 60;
+           int sec = duration % 3600 % 60;
+
+            if (duration == 0)
+            {
+                Timer.Stop();
+                Logout();
+
+            }
+            else if (duration > 0)
+            {
+                duration--;
+                Logintmr.Text = (min + ":" + sec).ToString();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) //아이디 비밀번호 찾기
@@ -26,6 +61,12 @@ namespace BookMgr
             Book.TabPages.Remove(Mgrbookpage);
             User.TabPages.Remove(MgrOrder);
             User.TabPages.Remove(UserData);
+
+            Timer = new System.Windows.Forms.Timer();
+            Timer.Tick += new EventHandler(count_down);
+            Timer.Interval = 1000;
+            Timer.Start();
+
             string id = IDtxt.Text;
             string pw = PWtxt.Text;
             db.connect();
@@ -125,17 +166,7 @@ namespace BookMgr
             DialogResult result = MessageBox.Show("로그아웃하시겠습니까?", "로그아웃", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes) // 로그아웃 확인시
             {
-                Loginpnl.Visible = false;
-                Book.Visible = false;
-                User.Visible = false;
-                Treeptr.Visible = false;
-                Leafptr.Visible = false;
-                Seedptr.Visible = false;
-                UserDataUpdatepnl.Visible = false;
-                IDtxt.Text = "아이디";
-                PWtxt.Text = "비밀번호";
-                IDtxt.ForeColor = Color.Silver;
-                PWtxt.ForeColor = Color.Silver;
+                Logout();
             }
         }
         private void bookBtn_Click(object sender, EventArgs e) // 북메뉴 버튼
@@ -505,6 +536,11 @@ namespace BookMgr
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             mId = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void extTimerbtn_Click(object sender, EventArgs e)
+        {
+            duration = 600;
         }
 
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
