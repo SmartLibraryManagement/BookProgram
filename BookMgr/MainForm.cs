@@ -26,6 +26,7 @@ namespace BookMgr
             Leafptr.Visible = false;
             Seedptr.Visible = false;
             UserDataUpdatepnl.Visible = false;
+            duration = 600;
             IDtxt.Text = "아이디";
             PWtxt.Text = "비밀번호";
             IDtxt.ForeColor = Color.Silver;

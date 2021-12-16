@@ -106,6 +106,21 @@ namespace BookMgr
             adapter.Fill(dt);
             return dt;
         }
+        public string userIDCheck(String ID)
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select User_Num from user where name= '" + ID + "'", con);
+            com.Fill(ds);
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["name"].ToString();
+                return str;
+            }
+            catch
+            {
+                return null;
+            }
+        }
         public string userCheck(String ID)
         {
             DataSet ds = new DataSet();

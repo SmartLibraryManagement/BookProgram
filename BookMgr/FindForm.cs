@@ -29,20 +29,30 @@ namespace BookMgr
                 MessageBox.Show("빈칸을 입력해주세요", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+            else if (FindName1txt.Text == "db" || FindEmail1txt.Text == "db")
+            {
+                MessageBox.Show("정보를 다시 입력해주세요.", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
             else
             {
-                MessageBox.Show("이메일로 아이디를 보냈습니다", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
+                
+              //  MessageBox.Show("회원님의 아이디는 "+   +" 입니다", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
         }
         private void FindPWbtn_Click(object sender, EventArgs e) //비밀번호 찾기 버튼
         {
-            if (FindName2txt.Text == "" || FindEmail2txt.Text == ""||FindIDtxt.Text == "")
+            if (FindName2txt.Text == "" || FindEmail2txt.Text == "" || FindIDtxt.Text == "")
             {
                 MessageBox.Show("빈칸을 입력해주세요", "입력 오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            else if (FindName2txt.Text == "db" || FindEmail2txt.Text == "db" || FindIDtxt.Text == "db")
+            {
+                MessageBox.Show("정보를 다시 입력해주세요.", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
             else
-
+            {
                 MessageBox.Show("이메일로 비밀번호를 보냈습니다", "아이디 찾기", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
         }
 
         private void Homebtn_Click(object sender, EventArgs e) // 홈으로 버튼
