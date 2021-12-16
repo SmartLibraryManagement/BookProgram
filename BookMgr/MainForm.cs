@@ -36,9 +36,9 @@ namespace BookMgr
         }
         private void count_down(object sender, EventArgs e) //타이머 체크다운
         {
-            
-           int min = duration % 3600 / 60;
-           int sec = duration % 3600 % 60;
+
+            int min = duration % 3600 / 60;
+            int sec = duration % 3600 % 60;
 
             if (duration == 0)
             {
@@ -65,7 +65,7 @@ namespace BookMgr
             User.TabPages.Remove(MgrOrder);
             User.TabPages.Remove(UserData);
 
-            
+
             Timer = new System.Windows.Forms.Timer();
             Timer.Tick += new EventHandler(count_down);
             Timer.Interval = 1000;
@@ -241,7 +241,7 @@ namespace BookMgr
                 db.bookOrder(sql);
                 db.close();
                 MessageBox.Show("신청이 완료되었습니다.", "도서신청", MessageBoxButtons.OK, MessageBoxIcon.None);
-                
+
             }
         }
 
@@ -306,7 +306,7 @@ namespace BookMgr
             {
                 db.connect();
                 bool state = db.rentalState(uNum);
-                if(state)
+                if (state)
                 {
                     db.userScs(uNum);
                     Loginpnl.Visible = false;
@@ -330,7 +330,16 @@ namespace BookMgr
 
         private void ListDelbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-목록제거 버튼
         {
-
+            DialogResult result = MessageBox.Show("탈퇴하시겠습니까?", "회원탈퇴", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                string sql = "delete from request where request_num = '" + bNum + "';";
+                db.connect();
+                db.bookOrder(sql);
+                DataTable dt = db.showDBTable("select * from request");
+                dataGridView1.DataSource = dt;
+                db.close();
+            }
         }
 
         private void kickNo_Click(object sender, EventArgs e) // 유저-신청관리-회원탈퇴신청-탈퇴취소 버튼
@@ -343,7 +352,10 @@ namespace BookMgr
         }
         private void BookPutbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-도서등록 버튼
         {
-            string sql = "delete from request where request_num = '" + bNum + "');";
+            string sql = "delete from request where request_num = '" + bNum + "';";
+            db.connect();
+            db.bookOrder(sql);
+            db.close();
             Book.SelectedTab = Book.TabPages[2];
             User.Visible = false;
             Book.Visible = true;
@@ -540,17 +552,31 @@ namespace BookMgr
 
         private void MgrGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            bNum = MgrGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-            MgrTitletxt.Text = MgrGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MgrAuthortxt.Text = MgrGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            MgrPublishertxt.Text = MgrGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-            MgrDatetxt.Text = MgrGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
-            MgrISBNtxt.Text = MgrGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+            try
+            {
+                bNum = MgrGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MgrTitletxt.Text = MgrGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                MgrAuthortxt.Text = MgrGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
+                MgrPublishertxt.Text = MgrGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                MgrDatetxt.Text = MgrGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
+                MgrISBNtxt.Text = MgrGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+            }
+            catch
+            {
+            }
+
         }
 
         private void dataGridView2_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            mId = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                mId = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            }
+            catch
+            {
+            }
         }
 
         private void extTimerbtn_Click(object sender, EventArgs e)
@@ -560,16 +586,28 @@ namespace BookMgr
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            bNum = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            MgrTitletxt.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            MgrAuthortxt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            MgrPublishertxt.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            MgrDatetxt.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            try
+            {
+                bNum = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MgrTitletxt.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                MgrAuthortxt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                MgrPublishertxt.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                MgrDatetxt.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            }
+            catch
+            {
+            }
         }
 
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            mId = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+            try
+            {
+                mId = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+            catch
+            {
+            }
         }
 
         private void FindGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
