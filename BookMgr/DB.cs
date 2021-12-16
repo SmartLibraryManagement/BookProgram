@@ -395,5 +395,26 @@ namespace BookMgr
                 MessageBox.Show("DB오류가 발생했습니다.");
             }
         }
+
+        public void bookOrder(string sql)
+        {
+            MySqlCommand com = new MySqlCommand(sql, con);
+            try
+            {
+                if (com.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공");
+                }
+                else
+                {
+                    MessageBox.Show("실패");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                MessageBox.Show("DB오류가 발생했습니다.");
+            }
+        }
     }
 }
