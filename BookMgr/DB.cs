@@ -7,7 +7,7 @@ namespace BookMgr
 {
     class DB
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=1234");
+        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=123456");
         public void connect()
         {
             if (con.State.ToString().Equals("Closed"))
@@ -231,6 +231,45 @@ namespace BookMgr
                 MessageBox.Show(e.Message);
                 MessageBox.Show("DB오류가 발생했습니다.");
             }
+        }
+
+        public void extRental(string bNum)    //연장
+        {
+            DateTime date;
+            string str;
+            DataSet ds = new DataSet();
+            MySqlDataAdapter comm = new MySqlDataAdapter("select * from rental where rental_num = '" + bNum + "'", con);
+            comm.Fill(ds);
+            try
+            {
+                str = ds.Tables[0].Rows[0]["return_date"].ToString();
+                date = Convert.ToDateTime(str);
+
+                string rDate = date.AddDays(7).ToString("d");
+                string sql = "update rental set rental.return_date = '" + rDate + "' where rental_num = '" + bNum + "';";
+
+                MySqlCommand com = new MySqlCommand(sql, con);
+                try
+                {
+                    if (com.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("성공");
+                    }
+                    else
+                    {
+                        MessageBox.Show("실패");
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    MessageBox.Show("DB오류가 발생했습니다.");
+                }
+            }
+            catch
+            {
+             
+            }     
         }
 
         public void rtBook(string sql)    //반납

@@ -213,7 +213,7 @@ namespace BookMgr
             System.Diagnostics.Process.Start("https://books.google.co.kr"); //구글도서사이트 연결
         }
 
-        private void UserRank_Load(object sender, EventArgs e)
+        private void UserRank_Load(object sender, EventArgs e)  // 유저-신청관리-회원등급관리
         {
             DB db = new DB();
             db.connect();
@@ -222,7 +222,7 @@ namespace BookMgr
             db.close();
         }
 
-        private void OrderList_Enter(object sender, EventArgs e)
+        private void OrderList_Enter(object sender, EventArgs e)    // 유저-신청관리-도서신청관리
         {
             db.connect();
             DataTable dt = db.showDBTable("select * from request");
@@ -230,7 +230,7 @@ namespace BookMgr
             db.close();
         }
 
-        private void Findbookpage_Enter(object sender, EventArgs e)
+        private void Findbookpage_Enter(object sender, EventArgs e) // 도서-도서검색
         {
             db.connect();
             DataTable dt = db.showDBTable("select * from books");
@@ -238,7 +238,7 @@ namespace BookMgr
             db.close();
         }
 
-        private void Returnbookpage_Enter(object sender, EventArgs e)
+        private void Returnbookpage_Enter(object sender, EventArgs e)   // 도서-도서반납
         {
             db.connect();
             DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '"+ uNum +"'; ");
@@ -246,7 +246,7 @@ namespace BookMgr
             db.close();
         }
 
-        private void Mgrbookpage_Enter(object sender, EventArgs e)
+        private void Mgrbookpage_Enter(object sender, EventArgs e)  // 도서-도서관리
         {
             db.connect();
             DataTable dt = db.showDBTable("select * from books");
@@ -254,7 +254,7 @@ namespace BookMgr
             db.close();
         }
 
-        private void Sucession_Enter(object sender, EventArgs e)
+        private void Sucession_Enter(object sender, EventArgs e)    // 유저-신청관리-회원탈퇴신청
         {
             db.connect();
             DataTable dt = db.showDBTable("select * from user where user.rank = 0");
@@ -283,17 +283,7 @@ namespace BookMgr
             }
         }
 
-        private void AllSelectBtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-전체선택 버튼
-        {
-
-        }
-
         private void ListDelbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-목록제거 버튼
-        {
-
-        }
-
-        private void AllSelect1btn_Click(object sender, EventArgs e) // 유저-신청관리-회원탈퇴신청-전체선택 버튼
         {
 
         }
@@ -306,7 +296,7 @@ namespace BookMgr
             dataGridView2.DataSource = dt;
             db.close();
         }
-        private void BookPutbtn_Click(object sender, EventArgs e) // // 유저-신청관리-도서신청관리-도서등록 버튼
+        private void BookPutbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-도서등록 버튼
         {
             Book.SelectedTab = Book.TabPages[2];
             User.Visible = false;
@@ -398,7 +388,15 @@ namespace BookMgr
 
         private void Longbtn_Click(object sender, EventArgs e) // 도서-도서반납-연장하기 버튼
         {
-
+            DialogResult result = MessageBox.Show("연장을 하시겠습니까?", "도서연장", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                db.connect();
+                db.extRental(bNum);
+                DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '" + uNum + "'; ");
+                RtnGridView.DataSource = dt;
+                db.close();
+            }
         }
 
         private void Rtnbtn_Click(object sender, EventArgs e) // 도서-도서반납-반납하기 버튼
