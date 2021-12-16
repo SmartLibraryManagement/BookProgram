@@ -339,7 +339,7 @@ namespace BookMgr
         }
         private void BookPutbtn_Click(object sender, EventArgs e) // 유저-신청관리-도서신청관리-도서등록 버튼
         {
-
+            string sql = "delete from request where request_num = '" + bNum + "');";
             Book.SelectedTab = Book.TabPages[2];
             User.Visible = false;
             Book.Visible = true;
@@ -501,7 +501,7 @@ namespace BookMgr
         }
         private void ListBookbtn_Click(object sender, EventArgs e) // 도서-도서관리-신청목록 버튼
         {
-            User.SelectedTab = User.TabPages[2];
+            User.SelectedTab = User.TabPages[1];
             Order.SelectedTab = Order.TabPages[0];
             Book.Visible = false;
             User.Visible = true;
@@ -552,6 +552,15 @@ namespace BookMgr
         private void extTimerbtn_Click(object sender, EventArgs e)
         {
             duration = 600;
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            bNum = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            MgrTitletxt.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            MgrAuthortxt.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            MgrPublishertxt.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            MgrDatetxt.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
         private void dataGridView3_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
