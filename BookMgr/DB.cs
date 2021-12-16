@@ -7,7 +7,7 @@ namespace BookMgr
 {
     class DB
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=1234");
+        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=123456");
         public void connect()
         {
             if (con.State.ToString().Equals("Closed"))

@@ -218,7 +218,7 @@ namespace BookMgr
                 DialogResult result = MessageBox.Show("회원정보를 수정하시겠습니까?", "회원정보수정", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    string sql = "update user set(`PW`, `Email`, `Tel`, `Name`, `Adress`) = ('" + UpdatePW1txt.Text + "', '" + Emailtxt.Text + "@" + EmailCbx.Text + "', '" + Teltxt.Text + "', '" + Nametxt.Text + "', '" + Addresstxt.Text + "');";
+                    string sql = "update user set PW = '" + UpdatePW1txt.Text + "', email = '" + Emailtxt.Text + "@" + EmailCbx.Text + "' , tel = '" + Teltxt.Text + "', name = '" + Nametxt.Text + "', adress = '" + Addresstxt.Text + "' where user_num = '" + uNum + "';";
                     db.connect();
                     db.insertQuery(sql);
                     db.close();
