@@ -10,14 +10,14 @@ namespace BookMgr
     {
         DB db = new DB();
         string uNum, bNum, mId;
-        int duration = 600;
+        int duration = 600; //타이머 600초
 
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void Logout()
+        private void Logout() //로그아웃 처리
         {
             Loginpnl.Visible = false;
             Book.Visible = false;
@@ -30,8 +30,9 @@ namespace BookMgr
             PWtxt.Text = "비밀번호";
             IDtxt.ForeColor = Color.Silver;
             PWtxt.ForeColor = Color.Silver;
+            MessageBox.Show("로그아웃 되었습니다.", "로그아웃", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
-        private void count_down(object sender, EventArgs e)
+        private void count_down(object sender, EventArgs e) //타이머 체크다운
         {
             
            int min = duration % 3600 / 60;
