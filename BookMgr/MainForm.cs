@@ -300,18 +300,26 @@ namespace BookMgr
             if (result == DialogResult.Yes)
             {
                 db.connect();
-                db.userScs(uNum);
+                bool state = db.rentalState(uNum);
+                if(state)
+                {
+                    db.userScs(uNum);
+                    Loginpnl.Visible = false;
+                    Book.Visible = false;
+                    User.Visible = false;
+                    Treeptr.Visible = false;
+                    Leafptr.Visible = false;
+                    Seedptr.Visible = false;
+                    IDtxt.Text = "아이디";
+                    PWtxt.Text = "비밀번호";
+                    IDtxt.ForeColor = Color.Silver;
+                    PWtxt.ForeColor = Color.Silver;
+                }
+                else
+                {
+                    MessageBox.Show("대여중인 책이 존재합니다.", "탈퇴오류", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 db.close();
-                Loginpnl.Visible = false;
-                Book.Visible = false;
-                User.Visible = false;
-                Treeptr.Visible = false;
-                Leafptr.Visible = false;
-                Seedptr.Visible = false;
-                IDtxt.Text = "아이디";
-                PWtxt.Text = "비밀번호";
-                IDtxt.ForeColor = Color.Silver;
-                PWtxt.ForeColor = Color.Silver;
             }
         }
 
