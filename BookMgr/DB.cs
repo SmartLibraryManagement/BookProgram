@@ -7,7 +7,7 @@ namespace BookMgr
 {
     class DB
     {
-        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=123456");
+        MySqlConnection con = new MySqlConnection("Server=localhost;Database=rentalbook;Uid=root;Pwd=1234");
         public void connect()
         {
             if (con.State.ToString().Equals("Closed"))
@@ -106,14 +106,29 @@ namespace BookMgr
             adapter.Fill(dt);
             return dt;
         }
-        public string userIDCheck(String ID)
+        public string findIDCheck(String name, String email) // 아이디 찾기
         {
             DataSet ds = new DataSet();
-            MySqlDataAdapter com = new MySqlDataAdapter("select User_Num from user where name= '" + ID + "'", con);
+            MySqlDataAdapter com = new MySqlDataAdapter("select ID from user where name= '" + name + "' and email='" + email + "';", con);
             com.Fill(ds);
             try
             {
-                String str = ds.Tables[0].Rows[0]["name"].ToString();
+                String str = ds.Tables[0].Rows[0]["ID"].ToString();
+                return str;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public string findPWCheck(String name, String ID,String email) // 비밀번호 찾기
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter com = new MySqlDataAdapter("select pw from user where name='"+ name  +"' and id = '" + ID  +"' and email='" + email +"';", con);
+            com.Fill(ds);
+            try
+            {
+                String str = ds.Tables[0].Rows[0]["pw"].ToString();
                 return str;
             }
             catch

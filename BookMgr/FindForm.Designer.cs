@@ -225,7 +225,7 @@ namespace BookMgr
             // 
             this.FindIDbtn.BackColor = System.Drawing.Color.LightGray;
             this.FindIDbtn.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
-            this.FindIDbtn.Location = new System.Drawing.Point(209, 271);
+            this.FindIDbtn.Location = new System.Drawing.Point(209, 275);
             this.FindIDbtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FindIDbtn.Name = "FindIDbtn";
             this.FindIDbtn.Size = new System.Drawing.Size(137, 62);
