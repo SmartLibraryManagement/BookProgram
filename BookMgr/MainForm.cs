@@ -13,12 +13,7 @@ namespace BookMgr
         public MainForm()
         {
             InitializeComponent();
-            Logintmr.Enabled = false; //프로그램 실행시 타이머 미작동
-            Timer.Text = "10";
-            Logintmr.Interval = 1000;
-
         }
-
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) //아이디 비밀번호 찾기
         {
@@ -31,10 +26,6 @@ namespace BookMgr
             Book.TabPages.Remove(Mgrbookpage);
             User.TabPages.Remove(MgrOrder);
             User.TabPages.Remove(UserData);
-
-            Timer.Text == 
-
-
             string id = IDtxt.Text;
             string pw = PWtxt.Text;
             db.connect();
