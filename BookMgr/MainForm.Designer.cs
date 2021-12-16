@@ -232,7 +232,7 @@ namespace BookMgr
             this.FindIDPasswordlbl.Font = new System.Drawing.Font("굴림", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.FindIDPasswordlbl.Location = new System.Drawing.Point(608, 404);
             this.FindIDPasswordlbl.Name = "FindIDPasswordlbl";
-            this.FindIDPasswordlbl.Size = new System.Drawing.Size(211, 70);
+            this.FindIDPasswordlbl.Size = new System.Drawing.Size(262, 87);
             this.FindIDPasswordlbl.TabIndex = 5;
             this.FindIDPasswordlbl.Text = "K-형제들";
             // 
@@ -402,7 +402,7 @@ namespace BookMgr
             this.Nimlbl.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.Nimlbl.Location = new System.Drawing.Point(1266, 45);
             this.Nimlbl.Name = "Nimlbl";
-            this.Nimlbl.Size = new System.Drawing.Size(42, 39);
+            this.Nimlbl.Size = new System.Drawing.Size(53, 49);
             this.Nimlbl.TabIndex = 21;
             this.Nimlbl.Text = "님";
             // 
@@ -413,7 +413,7 @@ namespace BookMgr
             this.Namelbl.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Namelbl.Location = new System.Drawing.Point(1153, 45);
             this.Namelbl.Name = "Namelbl";
-            this.Namelbl.Size = new System.Drawing.Size(92, 39);
+            this.Namelbl.Size = new System.Drawing.Size(115, 49);
             this.Namelbl.TabIndex = 20;
             this.Namelbl.Text = "홍길동";
             // 
@@ -700,7 +700,7 @@ namespace BookMgr
             this.label20.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label20.Location = new System.Drawing.Point(591, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(208, 49);
+            this.label20.Size = new System.Drawing.Size(261, 61);
             this.label20.TabIndex = 4;
             this.label20.Text = "회원정보수정";
             // 
@@ -710,7 +710,7 @@ namespace BookMgr
             this.label19.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label19.Location = new System.Drawing.Point(571, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(218, 49);
+            this.label19.Size = new System.Drawing.Size(273, 61);
             this.label19.TabIndex = 3;
             this.label19.Text = "비밀번호 확인";
             // 
@@ -742,7 +742,7 @@ namespace BookMgr
             this.label1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label1.Location = new System.Drawing.Point(322, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 39);
+            this.label1.Size = new System.Drawing.Size(157, 49);
             this.label1.TabIndex = 1;
             this.label1.Text = "비밀번호:";
             // 
@@ -794,7 +794,7 @@ namespace BookMgr
             this.label42.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label42.Location = new System.Drawing.Point(626, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(156, 49);
+            this.label42.Size = new System.Drawing.Size(195, 61);
             this.label42.TabIndex = 12;
             this.label42.Text = "도서 신청";
             // 
