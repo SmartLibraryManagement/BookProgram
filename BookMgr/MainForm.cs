@@ -169,6 +169,7 @@ namespace BookMgr
             if (result == DialogResult.Yes) // 로그아웃 확인시
             {
                 Logout();
+                duration = 600;
             }
         }
         private void bookBtn_Click(object sender, EventArgs e) // 북메뉴 버튼
