@@ -232,7 +232,7 @@ namespace BookMgr
             this.FindIDPasswordlbl.Font = new System.Drawing.Font("굴림", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.FindIDPasswordlbl.Location = new System.Drawing.Point(608, 404);
             this.FindIDPasswordlbl.Name = "FindIDPasswordlbl";
-            this.FindIDPasswordlbl.Size = new System.Drawing.Size(274, 81);
+            this.FindIDPasswordlbl.Size = new System.Drawing.Size(211, 70);
             this.FindIDPasswordlbl.TabIndex = 5;
             this.FindIDPasswordlbl.Text = "K-형제들";
             // 
@@ -244,7 +244,7 @@ namespace BookMgr
             this.Findlbl.LinkColor = System.Drawing.Color.Black;
             this.Findlbl.Location = new System.Drawing.Point(1103, 110);
             this.Findlbl.Name = "Findlbl";
-            this.Findlbl.Size = new System.Drawing.Size(183, 17);
+            this.Findlbl.Size = new System.Drawing.Size(145, 13);
             this.Findlbl.TabIndex = 6;
             this.Findlbl.TabStop = true;
             this.Findlbl.Text = "아이디/비밀번호 찾기";
@@ -258,7 +258,7 @@ namespace BookMgr
             this.Joinlbl.LinkColor = System.Drawing.Color.Black;
             this.Joinlbl.Location = new System.Drawing.Point(1103, 134);
             this.Joinlbl.Name = "Joinlbl";
-            this.Joinlbl.Size = new System.Drawing.Size(80, 17);
+            this.Joinlbl.Size = new System.Drawing.Size(63, 13);
             this.Joinlbl.TabIndex = 7;
             this.Joinlbl.TabStop = true;
             this.Joinlbl.Text = "회원가입";
@@ -283,7 +283,7 @@ namespace BookMgr
             this.Verlbl.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Verlbl.Location = new System.Drawing.Point(1314, 796);
             this.Verlbl.Name = "Verlbl";
-            this.Verlbl.Size = new System.Drawing.Size(119, 24);
+            this.Verlbl.Size = new System.Drawing.Size(95, 19);
             this.Verlbl.TabIndex = 9;
             this.Verlbl.Text = "ver-1.0.0";
             // 
@@ -339,7 +339,7 @@ namespace BookMgr
             this.Logintmr.Font = new System.Drawing.Font("굴림", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.Logintmr.Location = new System.Drawing.Point(1274, 108);
             this.Logintmr.Name = "Logintmr";
-            this.Logintmr.Size = new System.Drawing.Size(0, 24);
+            this.Logintmr.Size = new System.Drawing.Size(0, 19);
             this.Logintmr.TabIndex = 29;
             // 
             // Seedptr
@@ -370,7 +370,7 @@ namespace BookMgr
             this.label4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(1131, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 24;
             this.label4.Text = "등급";
             // 
@@ -381,7 +381,7 @@ namespace BookMgr
             this.Ranklbl.ForeColor = System.Drawing.Color.Lime;
             this.Ranklbl.Location = new System.Drawing.Point(1095, 110);
             this.Ranklbl.Name = "Ranklbl";
-            this.Ranklbl.Size = new System.Drawing.Size(44, 17);
+            this.Ranklbl.Size = new System.Drawing.Size(35, 13);
             this.Ranklbl.TabIndex = 23;
             this.Ranklbl.Text = "나무";
             // 
@@ -402,7 +402,7 @@ namespace BookMgr
             this.Nimlbl.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.Nimlbl.Location = new System.Drawing.Point(1266, 45);
             this.Nimlbl.Name = "Nimlbl";
-            this.Nimlbl.Size = new System.Drawing.Size(54, 46);
+            this.Nimlbl.Size = new System.Drawing.Size(42, 39);
             this.Nimlbl.TabIndex = 21;
             this.Nimlbl.Text = "님";
             // 
@@ -413,7 +413,7 @@ namespace BookMgr
             this.Namelbl.ForeColor = System.Drawing.SystemColors.Highlight;
             this.Namelbl.Location = new System.Drawing.Point(1153, 45);
             this.Namelbl.Name = "Namelbl";
-            this.Namelbl.Size = new System.Drawing.Size(122, 46);
+            this.Namelbl.Size = new System.Drawing.Size(92, 39);
             this.Namelbl.TabIndex = 20;
             this.Namelbl.Text = "홍길동";
             // 
@@ -521,7 +521,7 @@ namespace BookMgr
             this.Teltxt.Location = new System.Drawing.Point(949, 250);
             this.Teltxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Teltxt.Name = "Teltxt";
-            this.Teltxt.Size = new System.Drawing.Size(285, 30);
+            this.Teltxt.Size = new System.Drawing.Size(285, 26);
             this.Teltxt.TabIndex = 31;
             // 
             // UserDelbtn
@@ -562,7 +562,7 @@ namespace BookMgr
             this.EmailCbx.Location = new System.Drawing.Point(470, 251);
             this.EmailCbx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmailCbx.Name = "EmailCbx";
-            this.EmailCbx.Size = new System.Drawing.Size(188, 28);
+            this.EmailCbx.Size = new System.Drawing.Size(188, 24);
             this.EmailCbx.TabIndex = 28;
             // 
             // label41
@@ -570,7 +570,7 @@ namespace BookMgr
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(443, 255);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(28, 20);
+            this.label41.Size = new System.Drawing.Size(21, 16);
             this.label41.TabIndex = 27;
             this.label41.Text = "@";
             // 
@@ -581,7 +581,7 @@ namespace BookMgr
             this.Emailtxt.Location = new System.Drawing.Point(263, 250);
             this.Emailtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Emailtxt.Name = "Emailtxt";
-            this.Emailtxt.Size = new System.Drawing.Size(180, 30);
+            this.Emailtxt.Size = new System.Drawing.Size(180, 26);
             this.Emailtxt.TabIndex = 23;
             // 
             // label37
@@ -590,7 +590,7 @@ namespace BookMgr
             this.label37.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label37.Location = new System.Drawing.Point(800, 256);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(113, 20);
+            this.label37.Size = new System.Drawing.Size(90, 16);
             this.label37.TabIndex = 20;
             this.label37.Text = "*전화번호:";
             // 
@@ -601,7 +601,7 @@ namespace BookMgr
             this.Addresstxt.Location = new System.Drawing.Point(949, 175);
             this.Addresstxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Addresstxt.Name = "Addresstxt";
-            this.Addresstxt.Size = new System.Drawing.Size(423, 30);
+            this.Addresstxt.Size = new System.Drawing.Size(423, 26);
             this.Addresstxt.TabIndex = 19;
             // 
             // label38
@@ -610,7 +610,7 @@ namespace BookMgr
             this.label38.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label38.Location = new System.Drawing.Point(800, 181);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(59, 20);
+            this.label38.Size = new System.Drawing.Size(48, 16);
             this.label38.TabIndex = 18;
             this.label38.Text = "주소:";
             // 
@@ -621,7 +621,7 @@ namespace BookMgr
             this.Nametxt.Location = new System.Drawing.Point(949, 100);
             this.Nametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Nametxt.Name = "Nametxt";
-            this.Nametxt.Size = new System.Drawing.Size(114, 30);
+            this.Nametxt.Size = new System.Drawing.Size(114, 26);
             this.Nametxt.TabIndex = 17;
             // 
             // label39
@@ -630,7 +630,7 @@ namespace BookMgr
             this.label39.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label39.Location = new System.Drawing.Point(800, 106);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(71, 20);
+            this.label39.Size = new System.Drawing.Size(56, 16);
             this.label39.TabIndex = 16;
             this.label39.Text = "*이름:";
             // 
@@ -640,7 +640,7 @@ namespace BookMgr
             this.label35.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label35.Location = new System.Drawing.Point(114, 256);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(92, 20);
+            this.label35.Size = new System.Drawing.Size(73, 16);
             this.label35.TabIndex = 13;
             this.label35.Text = "*이메일:";
             // 
@@ -652,7 +652,7 @@ namespace BookMgr
             this.UpdatePW2txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UpdatePW2txt.Name = "UpdatePW2txt";
             this.UpdatePW2txt.PasswordChar = '*';
-            this.UpdatePW2txt.Size = new System.Drawing.Size(285, 30);
+            this.UpdatePW2txt.Size = new System.Drawing.Size(285, 26);
             this.UpdatePW2txt.TabIndex = 12;
             // 
             // label34
@@ -661,7 +661,7 @@ namespace BookMgr
             this.label34.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label34.Location = new System.Drawing.Point(114, 181);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(155, 20);
+            this.label34.Size = new System.Drawing.Size(124, 16);
             this.label34.TabIndex = 11;
             this.label34.Text = "*비밀번호확인:";
             // 
@@ -673,7 +673,7 @@ namespace BookMgr
             this.UpdatePW1txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.UpdatePW1txt.Name = "UpdatePW1txt";
             this.UpdatePW1txt.PasswordChar = '*';
-            this.UpdatePW1txt.Size = new System.Drawing.Size(285, 30);
+            this.UpdatePW1txt.Size = new System.Drawing.Size(285, 26);
             this.UpdatePW1txt.TabIndex = 10;
             // 
             // label23
@@ -682,7 +682,7 @@ namespace BookMgr
             this.label23.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label23.Location = new System.Drawing.Point(114, 106);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(113, 20);
+            this.label23.Size = new System.Drawing.Size(90, 16);
             this.label23.TabIndex = 9;
             this.label23.Text = "*비밀번호:";
             // 
@@ -700,7 +700,7 @@ namespace BookMgr
             this.label20.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label20.Location = new System.Drawing.Point(591, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(277, 57);
+            this.label20.Size = new System.Drawing.Size(208, 49);
             this.label20.TabIndex = 4;
             this.label20.Text = "회원정보수정";
             // 
@@ -710,7 +710,7 @@ namespace BookMgr
             this.label19.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label19.Location = new System.Drawing.Point(571, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(290, 57);
+            this.label19.Size = new System.Drawing.Size(218, 49);
             this.label19.TabIndex = 3;
             this.label19.Text = "비밀번호 확인";
             // 
@@ -733,7 +733,7 @@ namespace BookMgr
             this.CheckPWtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CheckPWtxt.Name = "CheckPWtxt";
             this.CheckPWtxt.PasswordChar = '*';
-            this.CheckPWtxt.Size = new System.Drawing.Size(457, 46);
+            this.CheckPWtxt.Size = new System.Drawing.Size(457, 39);
             this.CheckPWtxt.TabIndex = 0;
             // 
             // label1
@@ -742,7 +742,7 @@ namespace BookMgr
             this.label1.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label1.Location = new System.Drawing.Point(322, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 46);
+            this.label1.Size = new System.Drawing.Size(126, 39);
             this.label1.TabIndex = 1;
             this.label1.Text = "비밀번호:";
             // 
@@ -794,7 +794,7 @@ namespace BookMgr
             this.label42.Font = new System.Drawing.Font("굴림", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(130)));
             this.label42.Location = new System.Drawing.Point(626, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(206, 57);
+            this.label42.Size = new System.Drawing.Size(156, 49);
             this.label42.TabIndex = 12;
             this.label42.Text = "도서 신청";
             // 
@@ -815,7 +815,7 @@ namespace BookMgr
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(479, 406);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(80, 20);
+            this.label24.Size = new System.Drawing.Size(65, 16);
             this.label24.TabIndex = 10;
             this.label24.Text = "발행일:";
             // 
@@ -827,7 +827,7 @@ namespace BookMgr
             this.OrderDatetxt.Location = new System.Drawing.Point(602, 400);
             this.OrderDatetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderDatetxt.Name = "OrderDatetxt";
-            this.OrderDatetxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderDatetxt.Size = new System.Drawing.Size(245, 26);
             this.OrderDatetxt.TabIndex = 9;
             // 
             // label25
@@ -835,7 +835,7 @@ namespace BookMgr
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(479, 331);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(80, 20);
+            this.label25.Size = new System.Drawing.Size(65, 16);
             this.label25.TabIndex = 8;
             this.label25.Text = "출판사:";
             // 
@@ -847,7 +847,7 @@ namespace BookMgr
             this.OrderPublishertxt.Location = new System.Drawing.Point(602, 325);
             this.OrderPublishertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderPublishertxt.Name = "OrderPublishertxt";
-            this.OrderPublishertxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderPublishertxt.Size = new System.Drawing.Size(245, 26);
             this.OrderPublishertxt.TabIndex = 7;
             // 
             // label26
@@ -855,7 +855,7 @@ namespace BookMgr
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(479, 256);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(59, 20);
+            this.label26.Size = new System.Drawing.Size(48, 16);
             this.label26.TabIndex = 6;
             this.label26.Text = "저자:";
             // 
@@ -867,7 +867,7 @@ namespace BookMgr
             this.OrderAuthortxt.Location = new System.Drawing.Point(602, 250);
             this.OrderAuthortxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderAuthortxt.Name = "OrderAuthortxt";
-            this.OrderAuthortxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderAuthortxt.Size = new System.Drawing.Size(245, 26);
             this.OrderAuthortxt.TabIndex = 5;
             // 
             // label27
@@ -875,7 +875,7 @@ namespace BookMgr
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(479, 181);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(59, 20);
+            this.label27.Size = new System.Drawing.Size(48, 16);
             this.label27.TabIndex = 4;
             this.label27.Text = "제목:";
             // 
@@ -887,7 +887,7 @@ namespace BookMgr
             this.OrderTitletxt.Location = new System.Drawing.Point(602, 175);
             this.OrderTitletxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderTitletxt.Name = "OrderTitletxt";
-            this.OrderTitletxt.Size = new System.Drawing.Size(245, 30);
+            this.OrderTitletxt.Size = new System.Drawing.Size(245, 26);
             this.OrderTitletxt.TabIndex = 3;
             // 
             // MgrOrder
@@ -1151,7 +1151,7 @@ namespace BookMgr
             this.SrchDatetxt.Location = new System.Drawing.Point(1141, 344);
             this.SrchDatetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SrchDatetxt.Name = "SrchDatetxt";
-            this.SrchDatetxt.Size = new System.Drawing.Size(245, 30);
+            this.SrchDatetxt.Size = new System.Drawing.Size(245, 26);
             this.SrchDatetxt.TabIndex = 14;
             // 
             // rntBookBtn
@@ -1183,7 +1183,7 @@ namespace BookMgr
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(1017, 425);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 20);
+            this.label8.Size = new System.Drawing.Size(52, 16);
             this.label8.TabIndex = 10;
             this.label8.Text = "ISBN:";
             // 
@@ -1194,7 +1194,7 @@ namespace BookMgr
             this.SrchPublishertxt.Location = new System.Drawing.Point(1141, 194);
             this.SrchPublishertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SrchPublishertxt.Name = "SrchPublishertxt";
-            this.SrchPublishertxt.Size = new System.Drawing.Size(245, 30);
+            this.SrchPublishertxt.Size = new System.Drawing.Size(245, 26);
             this.SrchPublishertxt.TabIndex = 9;
             // 
             // label6
@@ -1202,7 +1202,7 @@ namespace BookMgr
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(1017, 350);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 8;
             this.label6.Text = "발행일:";
             // 
@@ -1213,7 +1213,7 @@ namespace BookMgr
             this.Srchauthortxt.Location = new System.Drawing.Point(1141, 269);
             this.Srchauthortxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Srchauthortxt.Name = "Srchauthortxt";
-            this.Srchauthortxt.Size = new System.Drawing.Size(245, 30);
+            this.Srchauthortxt.Size = new System.Drawing.Size(245, 26);
             this.Srchauthortxt.TabIndex = 7;
             // 
             // label7
@@ -1221,7 +1221,7 @@ namespace BookMgr
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(1017, 275);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 20);
+            this.label7.Size = new System.Drawing.Size(48, 16);
             this.label7.TabIndex = 6;
             this.label7.Text = "저자:";
             // 
@@ -1230,7 +1230,7 @@ namespace BookMgr
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(1017, 200);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 4;
             this.label5.Text = "출판사:";
             // 
@@ -1241,7 +1241,7 @@ namespace BookMgr
             this.SrchISBNtxt.Location = new System.Drawing.Point(1141, 419);
             this.SrchISBNtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SrchISBNtxt.Name = "SrchISBNtxt";
-            this.SrchISBNtxt.Size = new System.Drawing.Size(245, 30);
+            this.SrchISBNtxt.Size = new System.Drawing.Size(245, 26);
             this.SrchISBNtxt.TabIndex = 3;
             // 
             // label2
@@ -1249,7 +1249,7 @@ namespace BookMgr
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(1017, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "제목:";
             // 
@@ -1260,7 +1260,7 @@ namespace BookMgr
             this.SrchTitletxt.Location = new System.Drawing.Point(1141, 119);
             this.SrchTitletxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SrchTitletxt.Name = "SrchTitletxt";
-            this.SrchTitletxt.Size = new System.Drawing.Size(245, 30);
+            this.SrchTitletxt.Size = new System.Drawing.Size(245, 26);
             this.SrchTitletxt.TabIndex = 1;
             // 
             // FindGridView
@@ -1336,7 +1336,7 @@ namespace BookMgr
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(1017, 350);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 20);
+            this.label11.Size = new System.Drawing.Size(99, 16);
             this.label11.TabIndex = 10;
             this.label11.Text = "반납예정일:";
             // 
@@ -1347,7 +1347,7 @@ namespace BookMgr
             this.RtnDatetxt.Location = new System.Drawing.Point(1141, 344);
             this.RtnDatetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RtnDatetxt.Name = "RtnDatetxt";
-            this.RtnDatetxt.Size = new System.Drawing.Size(245, 30);
+            this.RtnDatetxt.Size = new System.Drawing.Size(245, 26);
             this.RtnDatetxt.TabIndex = 9;
             // 
             // label12
@@ -1355,7 +1355,7 @@ namespace BookMgr
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(1017, 275);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 20);
+            this.label12.Size = new System.Drawing.Size(65, 16);
             this.label12.TabIndex = 8;
             this.label12.Text = "출판사:";
             // 
@@ -1366,7 +1366,7 @@ namespace BookMgr
             this.RtnPublishertxt.Location = new System.Drawing.Point(1141, 269);
             this.RtnPublishertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RtnPublishertxt.Name = "RtnPublishertxt";
-            this.RtnPublishertxt.Size = new System.Drawing.Size(245, 30);
+            this.RtnPublishertxt.Size = new System.Drawing.Size(245, 26);
             this.RtnPublishertxt.TabIndex = 7;
             // 
             // label10
@@ -1374,7 +1374,7 @@ namespace BookMgr
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(1017, 200);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 20);
+            this.label10.Size = new System.Drawing.Size(48, 16);
             this.label10.TabIndex = 6;
             this.label10.Text = "저자:";
             // 
@@ -1385,7 +1385,7 @@ namespace BookMgr
             this.RtnAuthortxt.Location = new System.Drawing.Point(1141, 194);
             this.RtnAuthortxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RtnAuthortxt.Name = "RtnAuthortxt";
-            this.RtnAuthortxt.Size = new System.Drawing.Size(245, 30);
+            this.RtnAuthortxt.Size = new System.Drawing.Size(245, 26);
             this.RtnAuthortxt.TabIndex = 5;
             // 
             // label9
@@ -1393,7 +1393,7 @@ namespace BookMgr
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(1017, 125);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 20);
+            this.label9.Size = new System.Drawing.Size(48, 16);
             this.label9.TabIndex = 4;
             this.label9.Text = "제목:";
             // 
@@ -1404,7 +1404,7 @@ namespace BookMgr
             this.RtnTitletxt.Location = new System.Drawing.Point(1141, 119);
             this.RtnTitletxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RtnTitletxt.Name = "RtnTitletxt";
-            this.RtnTitletxt.Size = new System.Drawing.Size(245, 30);
+            this.RtnTitletxt.Size = new System.Drawing.Size(245, 26);
             this.RtnTitletxt.TabIndex = 3;
             // 
             // RtnGridView
@@ -1495,7 +1495,7 @@ namespace BookMgr
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(1017, 426);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 20);
+            this.label17.Size = new System.Drawing.Size(52, 16);
             this.label17.TabIndex = 22;
             this.label17.Text = "ISBN:";
             // 
@@ -1506,7 +1506,7 @@ namespace BookMgr
             this.MgrISBNtxt.Location = new System.Drawing.Point(1141, 420);
             this.MgrISBNtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MgrISBNtxt.Name = "MgrISBNtxt";
-            this.MgrISBNtxt.Size = new System.Drawing.Size(245, 30);
+            this.MgrISBNtxt.Size = new System.Drawing.Size(245, 26);
             this.MgrISBNtxt.TabIndex = 21;
             // 
             // label18
@@ -1514,7 +1514,7 @@ namespace BookMgr
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(1017, 351);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(80, 20);
+            this.label18.Size = new System.Drawing.Size(65, 16);
             this.label18.TabIndex = 20;
             this.label18.Text = "출판사:";
             // 
@@ -1525,7 +1525,7 @@ namespace BookMgr
             this.MgrPublishertxt.Location = new System.Drawing.Point(1141, 345);
             this.MgrPublishertxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MgrPublishertxt.Name = "MgrPublishertxt";
-            this.MgrPublishertxt.Size = new System.Drawing.Size(245, 30);
+            this.MgrPublishertxt.Size = new System.Drawing.Size(245, 26);
             this.MgrPublishertxt.TabIndex = 19;
             // 
             // label13
@@ -1533,7 +1533,7 @@ namespace BookMgr
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(1017, 276);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(59, 20);
+            this.label13.Size = new System.Drawing.Size(48, 16);
             this.label13.TabIndex = 18;
             this.label13.Text = "저자:";
             // 
@@ -1544,7 +1544,7 @@ namespace BookMgr
             this.MgrAuthortxt.Location = new System.Drawing.Point(1141, 270);
             this.MgrAuthortxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MgrAuthortxt.Name = "MgrAuthortxt";
-            this.MgrAuthortxt.Size = new System.Drawing.Size(245, 30);
+            this.MgrAuthortxt.Size = new System.Drawing.Size(245, 26);
             this.MgrAuthortxt.TabIndex = 17;
             // 
             // label14
@@ -1552,7 +1552,7 @@ namespace BookMgr
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(1017, 201);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 20);
+            this.label14.Size = new System.Drawing.Size(65, 16);
             this.label14.TabIndex = 16;
             this.label14.Text = "발행일:";
             // 
@@ -1563,7 +1563,7 @@ namespace BookMgr
             this.MgrDatetxt.Location = new System.Drawing.Point(1141, 195);
             this.MgrDatetxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MgrDatetxt.Name = "MgrDatetxt";
-            this.MgrDatetxt.Size = new System.Drawing.Size(245, 30);
+            this.MgrDatetxt.Size = new System.Drawing.Size(245, 26);
             this.MgrDatetxt.TabIndex = 15;
             // 
             // label16
@@ -1571,7 +1571,7 @@ namespace BookMgr
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(1017, 126);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 20);
+            this.label16.Size = new System.Drawing.Size(48, 16);
             this.label16.TabIndex = 12;
             this.label16.Text = "제목:";
             // 
@@ -1582,7 +1582,7 @@ namespace BookMgr
             this.MgrTitletxt.Location = new System.Drawing.Point(1141, 120);
             this.MgrTitletxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MgrTitletxt.Name = "MgrTitletxt";
-            this.MgrTitletxt.Size = new System.Drawing.Size(245, 30);
+            this.MgrTitletxt.Size = new System.Drawing.Size(245, 26);
             this.MgrTitletxt.TabIndex = 11;
             // 
             // MgrGridView

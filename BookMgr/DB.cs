@@ -84,7 +84,7 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("등록 성공");
+                    MessageBox.Show("도서를 등록하였습니다.");
                 }
                 else
                 {
@@ -249,11 +249,11 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("성공");
+                    MessageBox.Show("도서를 대여하였습니다.", "도서대여", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -299,11 +299,11 @@ namespace BookMgr
                 {
                     if (com.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("성공");
+                        MessageBox.Show("대여기간을 연장하였습니다.", "대여기간 연장", MessageBoxButtons.OK, MessageBoxIcon.None);
                     }
                     else
                     {
-                        MessageBox.Show("실패");
+                        MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception e)
@@ -325,11 +325,11 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("성공");
+                    MessageBox.Show("도서를 반납하였습니다.", "도서반납", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -346,11 +346,11 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("성공");
+                    MessageBox.Show("회원등급을 올렸습니다.", "등급변경", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -368,11 +368,11 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("성공");
+                    MessageBox.Show("회원등급을 내렸습니다.", "등급변경", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -390,11 +390,11 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("성공");
+                    MessageBox.Show("회원탈퇴등급으로 변경했습니다.", "등급변경", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -416,7 +416,7 @@ namespace BookMgr
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -433,11 +433,11 @@ namespace BookMgr
             {
                 if (com.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("신청 성공");
+                    MessageBox.Show("도서신청 완료", "도서신청", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
@@ -458,7 +458,7 @@ namespace BookMgr
                 }
                 else
                 {
-                    MessageBox.Show("실패");
+                    MessageBox.Show("실패", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception e)
