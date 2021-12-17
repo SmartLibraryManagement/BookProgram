@@ -473,6 +473,10 @@ namespace BookMgr
                 RtnGridView.DataSource = dt;
                 db.close();
                 bNum = null;
+                RtnTitletxt.Text = "";
+                RtnAuthortxt.Text = "";
+                RtnPublishertxt.Text = "";
+                RtnDatetxt.Text = "";
             }
         }
 
@@ -487,6 +491,10 @@ namespace BookMgr
                 DataTable dt = db.showDBTable("select rental_num, Title, Author, Publisher, Return_Date from rental inner join books on rental.Book_num = books.book_Num where user_Num = '" + uNum + "'; ");
                 RtnGridView.DataSource = dt;
                 db.close();
+                RtnTitletxt.Text = "";
+                RtnAuthortxt.Text = "";
+                RtnPublishertxt.Text = "";
+                RtnDatetxt.Text = "";
                 bNum = null;
             }
         }
@@ -552,6 +560,11 @@ namespace BookMgr
                 db.connect();
                 db.rental(uNum, bNum);
                 db.close();
+                SrchTitletxt.Text = "";
+                Srchauthortxt.Text = "";
+                SrchPublishertxt.Text = "";
+                SrchDatetxt.Text = "";
+                SrchISBNtxt.Text = "";
                 bNum = null;
             }
 
